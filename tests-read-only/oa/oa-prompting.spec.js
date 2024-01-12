@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import data from '../../src/data/dataset.js'
+import data from '../../src/data/artdata.js'
 
 describe('Test de data set', () => {
   describe('Dataset', () => {
