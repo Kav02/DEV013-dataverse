@@ -15,7 +15,7 @@ export default [
     },
     "additionalInformation": {
         "movement": "Cubismo",
-        "style": "Abstracto",
+        "style": "Expresionismo",
         "technique": "Óleo sobre lienzo",
     },
 },
@@ -51,7 +51,7 @@ export default [
     },
     "additionalInformation": {
         "movement": "Período Azul",
-        "style": "Expresionismo",
+        "style": "Simbolismo",
         "technique": "Óleo sobre lienzo",
     },
 },
@@ -65,12 +65,12 @@ export default [
     "imageURL": "url_de_la_imagen_artistretrato_frontera.jpg",
     "facts": {
         "artist": "Frida Kahlo",
-        "created": 1945,
+        "created": 1932,
         "value": 10000000,
     },
     "additionalInformation": {
-        "movement": "Realismo Mágico",
-        "style": "Surrealismo",
+        "movement": "Surrealismo",
+        "style": "Realismo Mágico",
         "technique": "Óleo sobre madera",
     },
 },
@@ -83,30 +83,30 @@ export default [
     "imageURL": "url_de_la_imagen_dos_fridas_modernas.jpg",
     "facts": {
         "artist": "Frida Kahlo",
-        "created": 1939,
+        "created": 1954,
         "value": 12000000,
     },
     "additionalInformation": {
         "movement": "Surrealismo",
-        "style": "Realismo Mágico",
+        "style": "Expresionismo",
         "technique": "Óleo sobre lienzo",
     },
 },
 {
-    "id": "naturaleza-muerta-con-monos",
-    "name": "Naturaleza Muerta con Monos",
+    "id": "viva-la vida",
+    "name": "Viva la Vida",
     "shortDescription": "Composición surrealista con elementos simbólicos",
     "description":
-        "Naturaleza Muerta con Monos es una obra surrealista de Frida Kahlo que presenta una composición única. La pintura muestra elementos simbólicos, como monos y frutas, en un contexto surreal. Los monos representan la dualidad de la naturaleza humana, mientras que las frutas añaden un toque de color y vitalidad. Esta obra destaca la habilidad de Kahlo para crear composiciones ricas en simbolismo y significado.",
+        "Viva la vida es un cuadro muy importante, ya que se lo conoce como la última pintura de Frida Kahlo. A pesar de su deteriorada salud, el título de esta obra es un tributo a la vida. Las frutas y la manera en que están pintadas son emocionantes, debido al color rojo vibrante en las sandías y a la frase que la artista escribió ocho días antes de morir.",
     "imageURL": "url_de_la_imagen_naturaleza_muerta_monos.jpg",
     "facts": {
         "artist": "Frida Kahlo",
-        "created": 1942,
-        "value": 10000000,
+        "created": 1954,
+        "value": 15000000,
     },
     "additionalInformation": {
         "movement": "Surrealismo",
-        "style": "Simbolismo",
+        "style": "Realismo Mágico",
         "technique": "Óleo sobre madera",
     },
 },
@@ -276,62 +276,56 @@ export default [
       "technique": "Acrílico sobre lienzo",
     },
   },
-  //Obras de Fernando de Szyszlo
-  {
-    "id": "paisaje-interior-i",
-    "name": "Paisaje Interior I",
-    "shortDescription":
-      "Abstracción que explora la introspección y la conexión con la naturaleza",
-    "description":
-      "Paisaje Interior I es una obra distintiva de Fernando de Szyszlo, donde la abstracción se combina con elementos evocativos de la naturaleza. La pintura invita a la introspección a través de formas geométricas y colores intensos. Szyszlo, un destacado representante del arte abstracto en América Latina, logra transmitir la conexión emocional con la naturaleza a través de su estilo único. Esta obra refleja su búsqueda de la expresión interior a través de la forma y el color.",
-    "imageURL": "url_de_la_imagen_paisaje_interior_i.jpg",
+  //Obras de Dali
+  { 
+    "id": "persistencia_memoria_dali",
+    "name": "La Persistencia de la Memoria",
+    "shortDescription": "Relojes derretidos en un paisaje surrealista",
+    "description": "La Persistencia de la Memoria, pintada por Salvador Dalí en 1931, es una obra surrealista que presenta relojes derretidos en un paisaje onírico. La obra simboliza la relatividad del tiempo y la fugacidad de la existencia. Dalí utiliza la técnica del realismo detallado para dar vida a los objetos en un estado fluido, desafiando las leyes convencionales de la física y la percepción del tiempo.",
+    "imageURL": "url_de_la_imagen_persistencia_memoria.jpg",
     "facts": {
-      "artist": "Fernando de Szyszlo",
-      "created": 1990,
-      "value": 40000000,
+      "artist": "Salvador Dalí",
+      "created": 1931,
+      "value": 30000000,
     },
     "additionalInformation": {
-      "movement": "Abstracción",
-      "style": "Paisaje Emocional",
-      "technique": "Acrílico sobre lienzo",
-    },
-  },
-  {
-    "id": "figuras-en-el-espacio",
-    "name": "Figuras en el Espacio",
-    "shortDescription":
-      "Exploración de formas humanas abstractas en un entorno tridimensional",
-    "description":
-      "Figuras en el Espacio es una obra que destaca la habilidad de Szyszlo para expresar la figura humana de manera abstracta. La pintura presenta formas estilizadas que sugieren figuras humanas inmersas en un entorno tridimensional. Los colores y las texturas crean una sensación de movimiento y profundidad. Szyszlo, conocido por su maestría en la abstracción, ofrece una obra que invita a la reflexión sobre la presencia humana en el espacio.",
-    "imageURL": "url_de_la_imagen_figuras_en_el_espacio.jpg",
-    "facts": {
-      "artist": "Fernando de Szyszlo",
-      "created": 1985,
-      "value": 35000000,
-    },
-    "additionalInformation": {
-      "movement": "Abstracción",
-      "style": "Figurativo Abstracto",
+      "movement": "Surrealismo",
+      "style": "Realismo detallado",
       "technique": "Óleo sobre lienzo",
     },
   },
   {
-    "id": "ritmo-y-color",
-    "name": "Ritmo y Color",
-    "shortDescription":
-      "Obra dinámica que celebra la interacción entre ritmo y color",
-    "description":
-      "Ritmo y Color es una obra vibrante que celebra la interacción entre la música, el ritmo y el color. Szyszlo utiliza formas geométricas y una paleta de colores intensa para transmitir una sensación de movimiento rítmico. La pintura refleja la influencia de la música en la obra de Szyszlo y su capacidad para expresar la vitalidad a través de la abstracción. Esta obra es un homenaje a la conexión entre las artes visuales y auditivas.",
-    "imageURL": "url_de_la_imagen_ritmo_y_color.jpg",
+    "id": "elefantes_espantados_dali",
+    "name": "Los Elefantes Espantados",
+    "shortDescription": "Elefantes delirantes con patas de insecto",
+    "description": "Los Elefantes Espantados, creado por Salvador Dalí en 1948, es una obra surrealista que representa elefantes con patas de insecto. Dalí juega con la realidad y la fantasía, creando una imagen onírica que desafía las expectativas. Los elefantes, elevados en patas delgadas, transmiten una sensación de fragilidad y delirio.",
+    "imageURL": "url_de_la_imagen_elefantes_espantados.jpg",
     "facts": {
-      "artist": "Fernando de Szyszlo",
-      "created": 2000,
-      "value": 45000000,
+      "artist": "Salvador Dalí",
+      "created": 1948,
+      "value": 25000000,
     },
     "additionalInformation": {
-      "movement": "Abstracción",
-      "style": "Ritmo Visual",
-      "technique": "Acrílico sobre lienzo",
+      "movement": "Surrealismo",
+      "style": "Realismo fantástico",
+      "technique": "Óleo sobre lienzo",
+    },
+  },
+  {
+    "id": "sacramento_ultima_cena_dali",
+    "name": "El Sacramento de la Última Cena",
+    "shortDescription": "Interpretación surrealista de la Última Cena",
+    "description": "El Sacramento de la Última Cena es una reinterpretación surrealista de Salvador Dalí del famoso evento bíblico. Pintada en 1955, Dalí incorpora elementos surrealistas y simbolismos en la composición, como la figura de Cristo en una perspectiva geométrica única. La obra refleja la obsesión de Dalí por la espiritualidad y su habilidad para transformar eventos históricos en experiencias visuales provocativas.",
+    "imageURL": "url_de_la_imagen_sacramento_ultima_cena.jpg",
+    "facts": {
+      "artist": "Salvador Dalí",
+      "created": 1955,
+      "value": 28000000,
+    },
+    "additionalInformation": {
+      "movement": "Surrealismo",
+      "style": "Simbolismo surrealista",
+      "technique": "Óleo sobre lienzo",
     },
   },
   //Obra de Georgia O'Keeffe
@@ -349,14 +343,14 @@ export default [
       "value": 50000000,
     },
     "additionalInformation": {
-      "movement": "Precisionismo",
+      "movement": "Abstraccionismo",
       "style": "Floritura Abstracta",
       "technique": "Óleo sobre lienzo",
     },
   },
   {
     "id": "paisaje-de-nueva-mexico-con-luz-de-luna",
-    "name": "Paisaje de Nuevo México con Luz de Luna",
+    "name": "Paisaje de Black Mesa",
     "shortDescription":
       "Representación nocturna de la tierra y el cielo del suroeste de Estados Unidos",
     "description":
@@ -364,11 +358,11 @@ export default [
     "imageURL": "url_de_la_imagen_paisaje_nuevo_mexico_luz_luna.jpg",
     "facts": {
       "artist": "Georgia O'Keeffe",
-      "created": 1943,
+      "created": 1931,
       "value": 40000000,
     },
     "additionalInformation": {
-      "movement": "Precisionismo",
+      "movement": "Abstraccionismo",
       "style": "Paisaje Nocturno",
       "technique": "Óleo sobre lienzo",
     },
@@ -387,7 +381,7 @@ export default [
       "value": 35000000,
     },
     "additionalInformation": {
-      "movement": "Abstracción",
+      "movement": "Abstraccionismo",
       "style": "Minimalismo",
       "technique": "Óleo sobre lienzo",
     },
@@ -434,7 +428,7 @@ export default [
   },
   {
     "id": "escena-de-te",
-    "name": "Escena de Té",
+    "name": "La taza de Té",
     "shortDescription": "Acuarela que captura la elegancia de una reunión social",
     "description":
       "Escena de Té es una obra elegante de Mary Cassatt que representa una reunión social en tono acuarela. La pintura captura la gracia y la sofisticación de la escena, con figuras femeninas disfrutando de una taza de té. Cassatt utiliza la acuarela para crear una atmósfera suave y luminosa. Esta obra refleja la participación de Cassatt en la vida social de la alta sociedad y su habilidad para plasmar la elegancia de la época.",
