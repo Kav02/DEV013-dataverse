@@ -19,9 +19,10 @@
     background-size: cover; /*para que la imagen se acome al contenedor*/
     width: 100%;
     padding-top:5px;
-    padding-bottom:50px;
+    padding-bottom:20px;
     margin:0;
-    
+    position: relative;
+   
  }
  h2{
     font-family: "JetBrains Mono";
@@ -30,18 +31,32 @@
     font-size: 30px;
     padding: 5px;
     margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
+    margin-bottom: 45px;
+    text-align: center; 
 }
+ article{
+    background-color: rgba(255, 255, 255, 0.7); /*para que la opacidad solo afecte al fonfo y no todo lo de adentro*/
+    width: 100%; 
+    padding-top:0px;
+    display:flex;
+    flex-direction: row;
+    margin-top: 0px;
+    position: absolute;
+    bottom: 0;
+    align-items: center; /*se alinea verticalmente*/
+    height:30%;
+
+    
+ }
 button{
-   font-family:"JetBrains Mono";
-   font-size: 14px;
-   color: white;
-   background-color: black;
-   border-radius: 10px;
-   padding: 4px 30px;
-   position: relative;
-  left: 90%;
+    font-family:"JetBrains Mono";
+    font-size: 14px;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    padding: 4px 30px;
+    position: absolute;
+   left: 90%;
 }
 
  footer{
