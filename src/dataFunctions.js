@@ -1,6 +1,6 @@
 // Estas funciones son ejemplos, aquí puedes desarrollar tus propias funciones.
 
-export const createCards = (data) => {
+/*export const createCards = (data) => {
 
   const rootElement = document.getElementById('root');
   const artWorkList = document.getElementById('artWorkList');
@@ -36,6 +36,10 @@ export const createCards = (data) => {
     
   return 'createCards';
 };
+
+export const anotherExample = () => {
+  return [];
+};*/
 
 export const anotherExample = () => {
   return [];
