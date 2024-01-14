@@ -1,0 +1,58 @@
+/* FONTS:
+ "Sometype Mono":Titulo de los cuadros
+ "JetBrains Mono":inf de las tarjetas,descipcion larga,cuadraditos,limpiar,galeria
+ "Ubuntu": art place,todo lo demas */
+
+ h1{
+    font-family: "Ubuntu";
+    color: white;
+    background-color: black;
+    width: 100%; /* Establece el ancho del contenedor del h2 */
+    font-size: 45px;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    font-weight: normal; /*para quitar el negrita de h1*/
+}
+ section{
+    background-image: url('./Imagenes/imagen\ section.jpg');
+    background-size: cover; /*para que la imagen se acome al contenedor*/
+    width: 100%;
+    padding-top:5px;
+    padding-bottom:50px;
+    margin:0;
+    
+ }
+ h2{
+    font-family: "JetBrains Mono";
+    background-color: #F5F1E5;
+    width: 20%; 
+    font-size: 30px;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+button{
+   font-family:"JetBrains Mono";
+   font-size: 14px;
+   color: white;
+   background-color: black;
+   border-radius: 10px;
+   padding: 4px 30px;
+   position: relative;
+  left: 90%;
+}
+
+ footer{
+    font-family: "JetBrains Mono";
+    width: 100%; 
+    padding: 10px;
+    font-size: 15px;
+    text-align:right;
+    border-top: 2px solid black;
+    
+    
+    
+    
+ }
