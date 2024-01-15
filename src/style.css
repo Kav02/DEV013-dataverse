@@ -9,7 +9,7 @@
     background-color: black;
     width: 100%; /* Establece el ancho del contenedor del h2 */
     font-size: 45px;
-    padding: 10px;
+    padding: 8px;
     margin: 0;
     text-align: center;
     font-weight: normal; /*para quitar el negrita de h1*/
@@ -29,9 +29,9 @@
     background-color: #F5F1E5;
     width: 20%; 
     font-size: 30px;
-    padding: 5px;
-    margin-top: 20px;
-    margin-bottom: 45px;
+    padding: 3px;
+    margin-top: 12px;
+    margin-bottom: 30px;
     text-align: center; 
 }
  article{
@@ -54,7 +54,7 @@ button{
     color: white;
     background-color: black;
     border-radius: 15px;
-    padding: 4px 30px;
+    padding: 2px 30px;
     position: absolute;
    left: 90%;
 }

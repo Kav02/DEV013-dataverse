@@ -1,4 +1,4 @@
-git git export const renderItems = (data) => {
+export const renderItems = (data) => {
   console.log(data)
   const artWorkList = document.getElementById('artWorkList');
   
