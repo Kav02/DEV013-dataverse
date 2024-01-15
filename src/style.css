@@ -14,7 +14,7 @@
     text-align: center;
     font-weight: normal; /*para quitar el negrita de h1*/
 }
- section{
+ #banner{
     background-image: url('./Imagenes/imagen\ section.jpg');
     background-size: cover; /*para que la imagen se acome al contenedor*/
     width: 100%;
@@ -58,16 +58,27 @@ button{
     position: absolute;
    left: 90%;
 }
-
- footer{
+footer{
     font-family: "JetBrains Mono";
     width: 100%; 
     padding: 10px;
     font-size: 15px;
     text-align:right;
     border-top: 2px solid black;
-    
-    
-    
-    
  }
+section{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 3vw;
+   justify-content:space-between ;
+     
+}
+img{
+   max-width: 300px;
+   height: auto;
+}
+ul {
+ list-style: none;  
+ background-color: antiquewhite;
+} 
