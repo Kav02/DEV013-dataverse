@@ -9,7 +9,7 @@
     background-color: black;
     width: 100%; /* Establece el ancho del contenedor del h2 */
     font-size: 45px;
-    padding: 10px;
+    padding: 8px;
     margin: 0;
     text-align: center;
     font-weight: normal; /*para quitar el negrita de h1*/
@@ -19,29 +19,44 @@
     background-size: cover; /*para que la imagen se acome al contenedor*/
     width: 100%;
     padding-top:5px;
-    padding-bottom:50px;
+    padding-bottom:20px;
     margin:0;
-    
+    position: relative;
+   
  }
  h2{
     font-family: "JetBrains Mono";
     background-color: #F5F1E5;
     width: 20%; 
     font-size: 30px;
-    padding: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
+    padding: 3px;
+    margin-top: 12px;
+    margin-bottom: 30px;
+    text-align: center; 
 }
+ article{
+    background-color: rgba(255, 255, 255, 0.7); /*para que la opacidad solo afecte al fonfo y no todo lo de adentro*/
+    width: 100%; 
+    padding-top:0px;
+    display:flex;
+    flex-direction: row;
+    margin-top: 0px;
+    position: absolute;
+    bottom: 0;
+    align-items: center; /*se alinea verticalmente*/
+    height:30%;
+
+    
+ }
 button{
-   font-family:"JetBrains Mono";
-   font-size: 14px;
-   color: white;
-   background-color: black;
-   border-radius: 10px;
-   padding: 4px 30px;
-   position: relative;
-  left: 90%;
+    font-family:"JetBrains Mono";
+    font-size: 14px;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    padding: 2px 30px;
+    position: absolute;
+   left: 90%;
 }
 footer{
     font-family: "JetBrains Mono";
@@ -57,13 +72,45 @@ section{
    flex-wrap: wrap;
    padding: 3vw;
    justify-content:space-between ;
-     
+   list-style: none; /*para que los puntitos desaparezcan*/
 }
 img{
+   margin:0 px;
+   padding: 0px;
    max-width: 300px;
    height: auto;
 }
 ul {
  list-style: none;  
- background-color: antiquewhite;
-} 
+ background-color: white;
+/* tutorial */
+ display: grid;
+ place-items:center center;
+}  
+dl{    /*tarjetas independientes*/
+   background-color: #f8f8f1;
+   max-width: 300 px;
+   padding-bottom:5%; 
+/* tutorial */
+   width:100%;
+   display:grid;
+   grid-template-columns: repeat(auto-fit,minmax(300px,0px));
+   grid-gap:0 px; 
+
+   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+ }  
+ dt, dd {   /*cada item dentro de las tarjetas*/
+   font-family: "JetBrains Mono";
+   font-size: small;
+   max-width: 100 px;
+   background-color:#F8F8F1;
+   margin: 1px 0;
+   text-align: center; /* Centra el texto horizontalmente */
+ }
+ dd[itemprop="name"] {
+   font-family: "Sometype Mono";
+   font-weight: bold;
+   font-size: larger;
+   margin:3px;
+ }
+ 
