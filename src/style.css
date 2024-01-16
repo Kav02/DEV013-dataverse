@@ -72,13 +72,45 @@ section{
    flex-wrap: wrap;
    padding: 3vw;
    justify-content:space-between ;
-     
+   list-style: none; /*para que los puntitos desaparezcan*/
 }
 img{
+   margin:0 px;
+   padding: 0px;
    max-width: 300px;
    height: auto;
 }
 ul {
  list-style: none;  
- background-color: antiquewhite;
-} 
+ background-color: white;
+/* tutorial */
+ display: grid;
+ place-items:center center;
+}  
+dl{    /*tarjetas independientes*/
+   background-color: #f8f8f1;
+   max-width: 300 px;
+   padding-bottom:5%; 
+/* tutorial */
+   width:100%;
+   display:grid;
+   grid-template-columns: repeat(auto-fit,minmax(300px,0px));
+   grid-gap:0 px; 
+
+   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+ }  
+ dt, dd {   /*cada item dentro de las tarjetas*/
+   font-family: "JetBrains Mono";
+   font-size: small;
+   max-width: 100 px;
+   background-color:#F8F8F1;
+   margin: 1px 0;
+   text-align: center; /* Centra el texto horizontalmente */
+ }
+ dd[itemprop="name"] {
+   font-family: "Sometype Mono";
+   font-weight: bold;
+   font-size: larger;
+   margin:3px;
+ }
+ 

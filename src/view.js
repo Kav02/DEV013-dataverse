@@ -17,6 +17,7 @@ export const renderItems = (data) => {
           <dt></dt><dd itemprop="artistName">${painting.facts.artistName}</dd>
           <dt></dt><dd itemprop="artMovement">${painting.facts.artMovement}</dd>
           <dt></dt><dd itemprop="creationYear">${painting.facts.creationYear}</dd>
+          <dt></dt><dd itemprop="shortDescription">${painting.shortDescription}</dd>
         </dl>`;
     artRenderedItems.appendChild(listItem); //Esta coloca todos los valores en la pantalla
     //renderedItems.push(listItem);//Push agrega los valores al array
