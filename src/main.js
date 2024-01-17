@@ -1,4 +1,4 @@
-import { anotherExample } from './dataFunctions.js';
+// import { anotherExample } from './dataFunctions.js';
 import { renderItems } from './view.js';
 import data from './data/artdata.js';
 

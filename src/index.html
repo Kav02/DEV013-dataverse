@@ -18,14 +18,29 @@
     <h2>GALERIA</h2>
       <article>
        <h3>Filtrar por</h3>
-       <h3>Ordenar</h3>
-       <button>Limpiar</button>
+       <select data-testid="select-filter" name="Autor">
+        <!-- si las opciones sean estaticas(escribir uno por uno,
+          o generada automaticamente de artdata) -->
+        <option value=""> </option>
+       </select>
+        <h3>Ordenar</h3>
+       <form>
+       <select data-testid="select-sort" name="Alfa">
+          <!-- <option value="Alfabeticamente">alfabeticamente</option>  -->
+          <option name="sort-order" value="A-Z">A-Z</option>
+          <option name="sort-order" value="Z-A">Z-A</option>
+          <option name="sort-order" value="asc">menor a mayor</option>
+          <option name="sort-order" value="des">mayor a menor</option> 
+       </select>
+      </form>
+
+       <button data-testid="button-clear">Limpiar</button>
       </article>
     </section>
       <div id="root">
       <ul itemscope itemtype="http://schema.org/ArtWork" id="artWorkList"></ul>
         
-    </div>
+      </div>
     
       <footer> Korin Amador y Diana Vilchez</footer>
     </main>
