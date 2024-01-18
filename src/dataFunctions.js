@@ -17,3 +17,12 @@ export const filterData  = () =>{};
 
 
 };
+
+export const sortData = (data, sortBy, sortOrder) =>{
+  const nombre = [];
+for (const list of data) {
+  const artworkName = list.artworkName;
+nombre.push(list);
+}
+console.log(nombre);
+}

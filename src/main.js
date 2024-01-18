@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import { anotherExample } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import data from "./data/artdata.js";
+=======
+// import { anotherExample } from './dataFunctions.js';
+import { renderItems } from './view.js';
+import data from './data/artdata.js';
+>>>>>>> 9d05c968085140297eabe67469ac07aaebb638c6
 
 //Genera las tarjetas a partir de render items
 const artWorkList = document.getElementById("artWorkList");
