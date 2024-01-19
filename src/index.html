@@ -21,25 +21,54 @@
        <select data-testid="select-filter" name="Autor">
         <!-- si las opciones sean estaticas(escribir uno por uno,
           o generada automaticamente de artdata) -->
-        <option value=""> </option>
+        <option value="Menú"> </option>
        </select>
-        <h3>Ordenar</h3>
-       <form>
-       <select data-testid="select-sort" name="Alfa">
-          <!-- <option value="Alfabeticamente">alfabeticamente</option>  -->
-          <option name="sort-order" value="A-Z">A-Z</option>
+        <h3>Ordenar por</h3>
+       <select data-testid="select-sort" name="ordenar por">
+         <optgroup label="Alfabeticamente">
+           <option name="sort-order" value="A-Z">A-Z</option>
           <option name="sort-order" value="Z-A">Z-A</option>
+        </optgroup> 
+        <optgroup label="Año de creación">
           <option name="sort-order" value="asc">menor a mayor</option>
           <option name="sort-order" value="des">mayor a menor</option> 
+        </optgroup>
        </select>
-      </form>
+
+
+
+      <!-- <label for="mainMenu"> </label>
+       <select  data-testid="select-sort" name="Menu1"  id="mainMenu" onchange="showSubmenu()">
+        <option name="sort-order" value="option1">Alfabeticamente </option>
+        <option name="sort-order" value="option2">Año de creación</option> 
+      </select>
+        
+      <div id="SubMenu1" class="Subopciones">
+        <label for="Subopciones1"></label>
+         <select id="Subopciones1">
+          <option id="subopcion1">A-Z</option>
+          <option id="subopcion2">Z-A</option>
+         </select>
+     </div>
+ 
+     <div id="SubMenu2" class="Subopciones">
+      <label for="Subopciones2"></label>
+       <select id="Subopciones2">
+        <option id="subopcion3">De menor a mayor</option>
+        <option id="subopcion4">De mayor a menor</option>
+       </select>
+   </div> -->
+     
+
+
+
 
        <button data-testid="button-clear">Limpiar</button>
       </article>
     </section>
       <div id="root">
       <ul itemscope itemtype="http://schema.org/ArtWork" id="artWorkList"></ul>
-        
+       <li itemtype="http://schema.org/ArtWork"> </li>  
       </div>
     
       <footer> Korin Amador y Diana Vilchez</footer>

@@ -2,12 +2,11 @@
  "Sometype Mono":Titulo de los cuadros
  "JetBrains Mono":inf de las tarjetas,descipcion larga,cuadraditos,limpiar,galeria
  "Ubuntu": art place,todo lo demas */
-
  body{
-   margin:0px;
+   margin:0;
  }
 
- h1{
+ h1{ /*ART PLACE*/
     font-family: "Ubuntu";
     color: white;
     background-color: black;
@@ -16,41 +15,41 @@
     margin: 0;
     text-align: center;
     font-weight: normal; /*para quitar el negrita de h1*/
-    width: 100%;
+    width: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    
 }
- #banner{
+ #banner{ /*galeria,filtros,img*/
     background-image: url('./Imagenes/imagen\ section.jpg');
     background-size: cover; /*para que la imagen se acome al contenedor*/
     width: 100%;
-    padding-top:5px;
-    padding-bottom:60px;
+    padding-top:0px;
+    padding-bottom:30px;
     margin:0;
     position: relative;
+    
  }
  #banner img {
    width: 100%;
-   object-fit: cover;
+   object-fit:cover;
  }
- h2{
+ h2{ /*Galeria*/
     font-family: "JetBrains Mono";
-    background-color: #F5F1E5;
-    width: 100%; 
+    background-color: #ca1f8b;
+    width: 20%; 
     font-size: 30px;
-    padding: 3px;
-    margin-top: 12px;
-    margin-bottom: 30px;
     text-align: center; 
-    margin-left: 0px;
+    position: absolute;
 }
- article{
-    background-color: rgba(255, 255, 255, 0.7); /*para que la opacidad solo afecte al fonfo y no todo lo de adentro*/
+ article{ /*Filtros */
+    background-color: rgba(98, 208, 227, 0.7); /*para que la opacidad solo afecte al fonfo y no todo lo de adentro*/
     width: 100%; 
-    padding:4px;
+    margin-top:80px;
     display:flex;
     flex-direction: row;
-    margin-top: 0px;
     position: absolute;
-    bottom: 0;
     align-items: center; /*se alinea verticalmente*/
     height:30%;
 
@@ -66,27 +65,14 @@ button{
     position: absolute;
    left: 70%;
 }
-footer{
-    font-family: "JetBrains Mono";
-    width: 100%; 
-    padding: 10px;
-    font-size: 15px;
-    text-align:right;
-    border-top: 2px solid black;
- }
-
 #root{ /*todo el cuerpo donde estan las tarjetas*/
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap; 
-   padding: 3vw;
-   justify-content:space-between ;
-   list-style: none; /*para que los puntitos desaparezcan*/
-
    background-color:white;
    columns:4 300px;    /*cuantas columnas y cual es su ancho*/
    column-gap:3%;   /*distancia entre columnas*/
    display: inline-block; /* Asegura que las tarjetas se comporten como bloques en línea */
+   padding: 3vw;
+   
+   list-style:none; /*para que los puntitos desaparezcan*/
 }
 
 dl{   /*tarjetas independientes*/
@@ -97,6 +83,7 @@ dl{   /*tarjetas independientes*/
    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);   /*oara generar la sombra*/
    break-inside: avoid-column; /* Evita que una tarjeta se divida entre columnas */
    display: block;  
+   
 }
 dt, dd {   /*cada item dentro de las tarjetas*/
    font-family: "JetBrains Mono";
@@ -108,8 +95,7 @@ dt, dd {   /*cada item dentro de las tarjetas*/
 img[itemprop="image"]{
    margin:0 px;
    padding: 0px;
-   max-width: 100%;
-   height: 100%;
+   width: 100%;
    object-fit: cover;
 }
  dd[itemprop="name"] {
@@ -118,4 +104,12 @@ img[itemprop="image"]{
    font-size: larger;
    margin:3px;
  }
+ footer{
+   font-family: "JetBrains Mono";
+   width: 100%; 
+   padding: 10px;
+   font-size: 15px;
+   text-align:right;
+   border-top: 2px solid black;
+}
  

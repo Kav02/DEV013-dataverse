@@ -11,7 +11,7 @@ export const renderItems = (data) => {
     // ` se utiliza para delimitar las plantillas de cadena, y ${}` se utiliza para insertar expresiones en esas plantillas de cadena.
   
     listItem.innerHTML =
-          `<dl itemscope itemtype="artWork">
+          `<dl itemscope itemtype="http://schema.org/ArtWork">
           <dt><img itemprop="image" src="${painting.imageUrl}" alt="${painting.name}"></dd>
           <dt></dt><dd itemprop="name">${painting.name}</dd>
           <dt></dt><dd itemprop="artistName">${painting.facts.artistName}</dd>
