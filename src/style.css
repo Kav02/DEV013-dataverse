@@ -34,7 +34,7 @@
  h2{
     font-family: "JetBrains Mono";
     background-color: #F5F1E5;
-    width: 100%; 
+    width: 30%; 
     font-size: 30px;
     padding: 3px;
     margin-top: 12px;
@@ -82,14 +82,13 @@ footer{
    padding: 3vw;
    justify-content:space-between ;
    list-style: none; /*para que los puntitos desaparezcan*/
-
    background-color:white;
    columns:4 300px;    /*cuantas columnas y cual es su ancho*/
    column-gap:3%;   /*distancia entre columnas*/
    display: inline-block; /* Asegura que las tarjetas se comporten como bloques en línea */
 }
 
-dl{   /*tarjetas independientes*/
+li{   /*tarjetas independientes*/
    background-color:#F8F8F1;
    max-width: 100%;
    margin-bottom: 20%;

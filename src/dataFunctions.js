@@ -12,17 +12,12 @@ export const filterData  = () =>{};
 //  1-Buscar en cada tarjeta el nombre del artista y cuando coincide despliega la tarjeta en pantalla, mostrando todas las que tienen coincidencia
 //  2-Al dar click en el botón limpiar regresa a "home"
 //  3- Ordenar (desarrollar aparte) 
+//Crear orden
 
-  //Crear orden
 
-
-};
+//};
 
 export const sortData = (data, sortBy, sortOrder) =>{
-  const nombre = [];
-for (const list of data) {
-  const artworkName = list.artworkName;
-nombre.push(list);
-}
-console.log(nombre);
+  
+
 }
