@@ -9,10 +9,8 @@ const shortCards = renderItems(data);
 // Agrega las cartas filtradas al elemento artWorkList
 artWorkList.appendChild(shortCards);
 
-
-
 //Crea la lista de artistas
-const artistList = [];//Crear array vacio
+const artistList = []; //Crear array vacio
 for (const artwork of data) {
   const artistName = artwork.facts.artistName;
   if (!artistList.includes(artistName)) {
@@ -40,9 +38,6 @@ for (const list of data) {
 }
 console.log(artName);
 
-
-
-
 // const liElements = artRenderedItems.querySelectorAll("li");
 // //artWorkList.appendChild(artRenderedItems);
 // console.log(artRenderedItems.children);
@@ -51,7 +46,7 @@ console.log(artName);
 // const shortCards = [];
 
 // for (const liElement of liElements) {
-    
+
 //   const picture = liElement.querySelector("dd[itemprop='imageUrl']").textContent;
 //   const name = liElement.querySelector("dd[itemprop='name']").textContent;
 //   const artist = liElement.querySelector("dd[itemprop='artistName']").textContent;
