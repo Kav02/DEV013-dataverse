@@ -246,7 +246,7 @@ export default [
   },
   {
     "id": "arco-y-punta",
-    "name": "arco y punta",
+    "name": "Arco y punta",
     "shortDescription": "Es una obra abstracta que fusiona colores vibrantes y formas geométricas expresando emociones visuales.",
     "description":
       "Arco y Punta es una obra maestra abstracta del artista Wassily Kandinsky, creada en 1927. La pintura cautiva con su vibrante paleta de colores y formas geométricas, desafiando la realidad figurativa. Kandinsky, pionero en el arte abstracto, utiliza líneas curvas, arcos y puntos para transmitir emociones y experiencias espirituales. La composición dinámica invita a la contemplación, llevando al espectador a un viaje introspectivo donde la abstracción se convierte en un medio para expresar lo inefable. Esta obra representa la visión innovadora de Kandinsky, explorando la sinergia entre forma y emoción en la pintura abstracta.",

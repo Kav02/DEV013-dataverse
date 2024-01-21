@@ -18,6 +18,16 @@ export const filterData  = () =>{};
 //};
 
 export const sortData = (data, sortBy, sortOrder) =>{
+<<<<<<< HEAD
+  const nombre = [];
+for (const list of data) {
+  const name = list.name;
+nombre.push(list);
+nombre.sort();
+}
+console.log(nombre);
+=======
   
 
+>>>>>>> ceb3d9c312b51b202d5222ea077b560c15982883
 }
