@@ -23,6 +23,7 @@
       <h2>GALERIA</h2>
       <article>
         <h3>Filtrar por</h3>
+        <label for="artist-filter"></label>
         <select data-testid="select-filter" id="artist-filter">
           <!-- si las opciones sean estaticas(escribir uno por uno,
           o generada automaticamente de artdata) -->
@@ -37,10 +38,13 @@
             <option name="sort-order" value="des">mayor a menor</option>
           </select>
         
-        <button data-testid="button-clear">Limpiar</button>
+          <button data-testid="button-clear">
+            <label for="button-clear">Limpiar</label> 
+          </button>
       </article>
     </section>
     <section id="root"></section>
+    <section id="detailCard"></section>
 
     <footer> Korin Amador y Diana Vilchez</footer>
   </main>

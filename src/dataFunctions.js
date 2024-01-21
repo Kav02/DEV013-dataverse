@@ -1,10 +1,11 @@
-// Estas funciones son ejemplos, aquí puedes desarrollar tus propias funciones.
+import data from "./data/artdata.js";
+export const filterData = (data, filterBy, value) =>{
 
-export const anotherExample = () => {
-  return [];
+
+
+
 };
-export const filterData  = () =>{};
-//data, filterBy, value
+
 //Crear filtro por artista en main
 
 //Crear un desplegable recorriendo la información del artdata buscando los artistas para desplegar la lista para que el usario seleccione
@@ -12,10 +13,15 @@ export const filterData  = () =>{};
 //  1-Buscar en cada tarjeta el nombre del artista y cuando coincide despliega la tarjeta en pantalla, mostrando todas las que tienen coincidencia
 //  2-Al dar click en el botón limpiar regresa a "home"
 //  3- Ordenar (desarrollar aparte) 
-//Crear orden
 
-
-//};
+//Crear orden por nombre
+const artName = [];
+for (const list of data) {
+  const artworkName = list.name;
+  artName.push(artworkName);
+  artName.sort();
+}
+console.log(artName);
 
 export const sortData = (data, sortBy, sortOrder) =>{
   

@@ -23,7 +23,7 @@ export const renderItems = (data) => {
   return artCard;
 };
 
-export const renderCard = (data) => {
+export const renderCards = (data) => {
   const longCard = document.createElement("ul"); 
   longCard.setAttribute("itemscope", "");
 
