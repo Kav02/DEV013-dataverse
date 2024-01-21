@@ -24,7 +24,7 @@ export default [
     "shortDescription": "Obra pionera del cubismo",
     "description":
         "Les Demoiselles d'Avignon es un hito revolucionario en la evolución del arte moderno. En esta obra, Picasso desafía convenciones artísticas al retratar cinco figuras desnudas con rostros de máscaras africanas y formas geométricas. Este cuadro señala el comienzo del cubismo, dejando una profunda huella en la evolución artística del siglo XX. La pintura se erige como un estudio intrépido de la forma y la percepción, cuestionando las normas establecidas de la representación artística y forjando nuevos caminos en la expresión visual.",
-    "imageUrl": "https://cdn.jsdelivr.net/gh/Kav02/DEV013-dataverse/src/Imagenes/Las-Señoritas-de-Avignon.jpg",
+    "imageUrl": "https://cdn.jsdelivr.net/gh/Kav02/DEV013-dataverse/src/Imagenes/Las-Senoritas-de-Avignon.jpg",
     "facts": {
         "artistName": "Pablo Picasso",
         "creationYear": 1907,
@@ -216,7 +216,7 @@ export default [
     "shortDescription": "Abstracto geométrico que explora la armonía y el caos",
     "description":
       "Composición VII es una obra icónica de Wassily Kandinsky, destacando su enfoque abstracto y la búsqueda de armonía en medio del caos. La pintura presenta formas geométricas y líneas dinámicas que crean una sensación de movimiento y energía. Kandinsky, un pionero del arte abstracto, utiliza colores vibrantes y contrastes para transmitir emociones profundas. Esta obra es representativa de su interés en la espiritualidad y la conexión entre arte y emoción, evidenciando su capacidad para plasmar la complejidad de la experiencia humana a través de una expresión visual rica y vibrante.",
-    "imageUrl": "https://cdn.jsdelivr.net/gh/Kav02/DEV013-dataverse/src/Imagenes/Composición-VII.jpeg",
+    "imageUrl": "https://cdn.jsdelivr.net/gh/Kav02/DEV013-dataverse/src/Imagenes/Composicion-VII.jpeg",
     "facts": {
       "artistName": "Wassily Kandinsky",
       "creationYear": 1913,
