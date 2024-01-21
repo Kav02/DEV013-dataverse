@@ -299,7 +299,7 @@ export default [
     "name": "El Sacramento de la Última Cena",
     "shortDescription": "Interpretación surrealista de la Última Cena",
     "description": "El Sacramento de la Última Cena, una obra de Salvador Dalí pintada en 1955, representa una reinterpretación surrealista del famoso evento bíblico. Dalí incorpora elementos surrealistas y simbolismos en la composición, destacando la figura de Cristo desde una perspectiva geométrica única. La obra refleja la obsesión de Dalí por la espiritualidad y su habilidad para transformar eventos históricos en experiencias visuales provocativas. La pintura encapsula la maestría del artista en fusionar lo surreal con lo sagrado, creando así una representación única y evocadora de la Última Cena.",
-    "imageUrl": "https://cdn.jsdelivr.net/gh/Kav02/DEV013-dataverse/src/Imagenes/El-Sacramento-de-la-Última-Cena.jpg",
+    "imageUrl": "https://cdn.jsdelivr.net/gh/Kav02/DEV013-dataverse/src/Imagenes/El-Sacramento-de-la-ultima-Cena.jpg",
     "facts": {
       "artistName": "Salvador Dalí",
       "creationYear": 1955,
