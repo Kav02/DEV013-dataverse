@@ -6,35 +6,47 @@ import data from "./data/artdata.js";
 document.addEventListener("DOMContentLoaded", () => {
   // Genera las tarjetas a partir de renderItems
   const artWorkList = document.getElementById("root");
-  const shortCards = renderItems(data);
-  // Agrega las tarjetas al elemento artWorkList
+  const shortCards = renderItems(data); // Agrega las tarjetas al elemento artWorkList
   artWorkList.appendChild(shortCards);
 
-  // Agrega manejador de eventos a cada imagen
+  // Crea la tarjeta detallada
   shortCards.querySelectorAll("img").forEach((image) => {
     image.addEventListener("click", (event) => {
       // Encuentra la pintura asociada a la imagen
       const painting = data.find(
         (painting) => painting.imageUrl === event.target.src
       );
-
-      // Obtiene la tarjeta detallada para esa pintura
-      const longCard = renderCards([painting]);
-      // Agrega la tarjeta detallada al elemento detailCard
-      const detailCard = document.getElementById("detailCard");
-      // Inserta el detailCard antes de la imagen que el usuario hizo clic
-      const imageParent = image.parentNode;
-      imageParent.insertBefore(detailCard, image);
-      detailCard.style.position = "fixed";
-
-      // Establece el contenido del elemento detailCard
+      const longCard = renderCards([painting]); // Obtiene la tarjeta detallada para esa pintura
+      const detailCard = document.getElementById("detailCard"); // Obtiene el elemento detailCard del html
+      const closeButton = document.createElement("button");
+      closeButton.id = "close-button";
+      closeButton.textContent = "Cerrar";
+      closeButton.addEventListener("click", function () {
+        detailCard.classList.add("close");
+        setTimeout(() => {
+          detailCard.classList.remove("close");
+          detailCard.style.display = "none";
+        }, 1000);
+      });
+      longCard.appendChild(closeButton);
       detailCard.innerHTML = longCard.outerHTML;
-
-      // Muestra el pop up
       detailCard.classList.add("show");
+           
+      console.log(longCard);
+      console.log(closeButton);
     });
   });
 });
+//Obtener el boton y funcion de cerrar
+
+
+
+/*window.addEventListener("click", e =>{
+ if (e.target !== detailCard) {
+if (detailCard.classList.contains("show")) {
+    closeCard();
+ }
+});*/
 
 //Crea la lista de artistas
 const artistList = []; //Crear array vacio
@@ -45,7 +57,6 @@ for (const artwork of data) {
     artistList.push(artistName); //Push para agregar en el array
   }
 }
-console.log(artistList);
 
 //Incluir lista en las opciones de filtrado
 const artistOptions = artistList.map(
@@ -53,7 +64,7 @@ const artistOptions = artistList.map(
 );
 const artistSelect = document.getElementById("artist-filter");
 artistSelect.innerHTML = `
-  <option value="">Todos los artistas</option>
+  <option value="">Artistas</option>
   ${artistOptions.join("")}
 `;
 

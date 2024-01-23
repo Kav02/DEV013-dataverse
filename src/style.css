@@ -200,10 +200,34 @@ option{
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
   background-color: white;
   padding: 20px;
-  border: 1px solid black;
+  border: none;
   z-index: 999;
 }
+#detailedCard{
+  
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%
 
+}
+.close{
+  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translateY(60vh);
+} 
+
+
+
+#closeButton{
+position: absolute;
+border-radius: 50%;
+top: 15px;
+right: 15px;
+display: flex;
+align-items: center;
+cursor: pointer;
+border-color: aqua;  
+}

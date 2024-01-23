@@ -31,7 +31,7 @@ export const renderCards = (data) => {
   data.forEach((painting) => {
     const listCard = document.createElement("li");
     listCard.setAttribute("itemtype", "");
-    listCard.innerHTML = `<dt><img itemprop="image" src="${painting.imageUrl}" alt="${painting.name}"></dd>
+    listCard.innerHTML = `<dt><img itemprop="imageDetail1" src="${painting.imageUrl}" alt="${painting.name}"></dd>
           <dt></dt><dd itemprop="name">${painting.name}</dd>
           <dt></dt><dd itemprop="artistName">${painting.facts.artistName}</dd>
           <dt></dt><dd itemprop="artMovement">${painting.facts.artMovement}</dd>
