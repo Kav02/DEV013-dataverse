@@ -19,7 +19,7 @@ export const renderItems = (data) => {
         </dl>`;
     artCard.appendChild(listItem); //Esta coloca todos los valores en la tarjeta
     
-  });
+  }) ;
   console.log();
   return artCard;
 };
@@ -31,16 +31,19 @@ export const renderCards = (data) => {
   data.forEach((painting) => {
     const listCard = document.createElement("li");
     listCard.setAttribute("itemtype", "");
-    listCard.innerHTML = `<dt><img itemprop="image" src="${painting.imageUrl}" alt="${painting.name}"></dd>
-          <dt></dt><dd itemprop="name">${painting.name}</dd>
-          <dt></dt><dd itemprop="artistName">${painting.facts.artistName}</dd>
-          <dt></dt><dd itemprop="artMovement">${painting.facts.artMovement}</dd>
-          <dt></dt><dd itemprop="creationYear">${painting.facts.creationYear}</dd>
-          <dt></dt><dd itemprop="shortDescription">${painting.shortDescription}</dd>
-          <dt>Descripción:</dt><dd itemprop="description">${painting.description}</dd>
-          <dt>Estilo:</dt><dd itemprop="style">${painting.additionalInformation.style}</dd>
-          <dt>Técnica:</dt><dd itemprop="technique">${painting.additionalInformation.technique}</dd>
-        `;
+    
+    listCard.innerHTML = `
+    <dt><img itemprop="imageDetails1" src="${painting.imageUrl}" alt="${painting.name}"></dd>
+          <dt></dt><dd itemprop="nameDetails">${painting.name}</dd>
+          
+          <dt></dt><dd itemprop="artistNameDetails">Artista:${painting.facts.artistName}</dd>
+          <dt></dt><dd itemprop="artMovementDetails">Corriente:${painting.facts.artMovement}</dd>
+          <dt></dt><dd itemprop="creationYearDetails">Año:${painting.facts.creationYear}</dd>
+          
+          <dt></dt><dd itemprop="descriptionDetails">${painting.description}</dd>
+          <dt></dt><dd itemprop="styleDetails">Estilo:${painting.additionalInformation.style}</dd>
+          <dt></dt><dd itemprop="techniqueDetails">Técnica:${painting.additionalInformation.technique}</dd>
+          `;
     longCard.appendChild(listCard); //Esta coloca todos los valores en la tarjeta
     console.log(longCard)
   });
@@ -48,3 +51,5 @@ export const renderCards = (data) => {
   console.log();
   return longCard;
 };
+
+{/* <dt></dt><dd itemprop="shortDescriptionDetails">${painting.shortDescription}</dd> */}

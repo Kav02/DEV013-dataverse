@@ -53,7 +53,7 @@ const artistOptions = artistList.map(
 );
 const artistSelect = document.getElementById("artist-filter");
 artistSelect.innerHTML = `
-  <option value="">Todos los artistas</option>
+  <option value="">Artistas</option>
   ${artistOptions.join("")}
 `;
 
@@ -64,3 +64,24 @@ for (const list of data) {
   artName.sort();
 }
 console.log(artName);
+
+
+//Crea la lista de Corrientes
+const MovementList = []; //Crear array vacio
+for (const artwork of data) {
+  const Movement = artwork.facts.artMovement;
+  if (!MovementList.includes(Movement)) {
+    //Incluye solo las corrientes diferentes
+    MovementList.push(Movement); //Push para agregar en el array
+  }
+}
+console.log(MovementList);
+
+//Incluir lista en las opciones de filtrado
+// const movementOptions = MovementList.map( Move =>`<option value="${Move}">${Move}</option>`);
+// const Movementselect= document.getElementById("artmovent-filter");
+// <option value="">Corrientes</option>
+
+
+
+// console.log(movementOptions);
