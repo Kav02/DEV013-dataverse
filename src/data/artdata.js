@@ -392,7 +392,7 @@ export default [
       "Retrato tierno de una niña sosteniendo su muñeca favorita",
     "description":
       "Niña con Muñeca es una destacada creación que resalta la maestría de Mary Cassatt al plasmar la inocencia infantil. La acuarela presenta a una niña que sostiene con amor su muñeca predilecta. La artista emplea colores suaves y pinceladas delicadas para comunicar la dulzura de este instante. Este retrato es un fiel reflejo del compromiso de Cassatt con la representación artística sensible de la vida cotidiana y las relaciones familiares. Su habilidad para capturar la ternura eleva la obra, destacando su capacidad para transmitir emociones genuinas a través de su arte.",
-    "imageUrl": "https://cdn.jsdelivr.net/gh/Kav02/DEV013-dataverse/src/Imagenes/src/Imagenes/little-girl-with-a-japanese-doll-Large.jpg",
+    "imageUrl": "https://cdn.jsdelivr.net/gh/Kav02/DEV013-dataverse/src/Imagenes/little-girl-with-a-japanese-doll-Large.jpg",
     "facts": {
       "artistName": "Mary Cassatt",
       "creationYear": 1880,
