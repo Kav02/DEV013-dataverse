@@ -210,14 +210,13 @@ option{
   
   position: relative;
   z-index: 1;
-  width: 100%;
-  height: 100%
+  width: 100vw;
+  height: 100vh
 
 }
 .close{
-  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
-  transform: translateY(60vh);
-} 
+  display: none;
+ } 
 
 
 
