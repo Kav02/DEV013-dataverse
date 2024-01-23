@@ -8,34 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const artWorkList = document.getElementById("root");
   const shortCards = renderItems(data); // Agrega las tarjetas al elemento artWorkList
   artWorkList.appendChild(shortCards);
-
-  // Crea la tarjeta detallada
-  shortCards.querySelectorAll("img").forEach((image) => {
-    image.addEventListener("click", (event) => {
-      // Encuentra la pintura asociada a la imagen
-      const painting = data.find(
-        (painting) => painting.imageUrl === event.target.src
-      );
-      const longCard = renderCards([painting]); // Obtiene la tarjeta detallada para esa pintura
-      const detailCard = document.getElementById("detailCard"); // Obtiene el elemento detailCard del html
-      const closeButton = document.createElement("button");
-      closeButton.id = "close-button";
-      closeButton.textContent = "Cerrar";
-      closeButton.addEventListener("click", function () {
-        detailCard.classList.add("close");
-        setTimeout(() => {
-          detailCard.classList.remove("close");
-          detailCard.style.display = "none";
-        }, 1000);
-      });
-      longCard.appendChild(closeButton);
-      detailCard.innerHTML = longCard.outerHTML;
-      detailCard.classList.add("show");
-           
-      console.log(longCard);
-      console.log(closeButton);
-    });
-  });
 });
 //Obtener el boton y funcion de cerrar
 

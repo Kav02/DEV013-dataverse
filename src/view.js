@@ -17,10 +17,27 @@ export const renderItems = (data) => {
           <dt></dt><dd itemprop="creationYear">${painting.facts.creationYear}</dd>
           <dt></dt><dd itemprop="shortDescription">${painting.shortDescription}</dd>
         </dl>`;
+    listItem.querySelector('img').addEventListener('click', () => {
+      const longCard = renderCards([painting]); // Obtiene la tarjeta detallada para esa pintura
+      const detailCard = document.getElementById("detailCard");
+      const closeButton = document.createElement("button");
+      closeButton.id = "close-button";
+      closeButton.textContent = "Cerrar";
+      longCard.appendChild(closeButton);
+      detailCard.innerHTML = longCard.outerHTML;
+      detailCard.classList.add("show");
+      detailCard.querySelector('#close-button').addEventListener('click', () => {
+        detailCard.classList.add("close");
+        setTimeout(() => {
+          detailCard.classList.remove("close");
+          detailCard.innerHTML = ''
+          detailCard.classList.remove('show')
+        }, 1000);
+      })
+    })
     artCard.appendChild(listItem); //Esta coloca todos los valores en la tarjeta
     
   });
-  console.log();
   return artCard;
 };
  
@@ -42,9 +59,8 @@ export const renderCards = (data) => {
           <dt>Técnica:</dt><dd itemprop="technique">${painting.additionalInformation.technique}</dd>
         `;
     longCard.appendChild(listCard); //Esta coloca todos los valores en la tarjeta
-    console.log(longCard)
+    
   });
 
-  console.log();
   return longCard;
 };
