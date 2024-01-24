@@ -374,7 +374,7 @@ export default [
       "Dos niñas juegan con cubos y palas intentando meter arena en ellos",
     "description":
       "Es uno de sus cuadros más entrañables en la que demostró su genialidad a la hora de pintar niños , quizá una de las facetas más difíciles de la pintura. La brillantez de la piel infantil en la que destacan los mofletes rosados o los brazos enrojecidos por el sol ha sido perfectamente interpretados por la artista. La delicadeza y el detallismo de las dos niñas contrastan con la soltura de los elementos que las rodean ,realizadas con una pincelada rápida sin prestar atención a los detalles.",
-    "imageUrl": "https://cdn.jsdelivr.net/gh/Kav02/DEV013-dataverse/src/Imagenes/niños-en-la-ducha.jpg",
+    "imageUrl": "https://cdn.jsdelivr.net/gh/Kav02/DEV013-dataverse/src/Imagenes/ninos-en-la-ducha.jpg",
     "facts": {
       "artistName": "Mary Cassatt",
       "creationYear": 1884,
@@ -392,7 +392,7 @@ export default [
       "Retrato tierno de una niña sosteniendo su muñeca favorita",
     "description":
       "Niña con Muñeca es una destacada creación que resalta la maestría de Mary Cassatt al plasmar la inocencia infantil. La acuarela presenta a una niña que sostiene con amor su muñeca predilecta. La artista emplea colores suaves y pinceladas delicadas para comunicar la dulzura de este instante. Este retrato es un fiel reflejo del compromiso de Cassatt con la representación artística sensible de la vida cotidiana y las relaciones familiares. Su habilidad para capturar la ternura eleva la obra, destacando su capacidad para transmitir emociones genuinas a través de su arte.",
-    "imageUrl": "https://cdn.jsdelivr.net/gh/Kav02/DEV013-dataverse/src/Imagenes/little-girl-with-a-japanese-doll.jpg!Large.jpg",
+    "imageUrl": "https://cdn.jsdelivr.net/gh/Kav02/DEV013-dataverse/src/Imagenes/little-girl-with-a-japanese-doll-Large.jpg",
     "facts": {
       "artistName": "Mary Cassatt",
       "creationYear": 1880,
