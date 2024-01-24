@@ -35,3 +35,36 @@ for (const list of data) {
   artName.sort();
 }
 console.log(artName);
+
+
+//Crea la lista de Corrientes
+const MovementList = []; //Crear array vacio
+for (const artwork of data) {
+  const Movement = artwork.facts.artMovement;
+  if (!MovementList.includes(Movement)) {
+    //Incluye solo las corrientes diferentes
+    MovementList.push(Movement); //Push para agregar en el array
+  }
+}
+console.log(MovementList);
+
+// Incluir lista en las opciones de filtrado
+const movementOptions = MovementList.map( Move =>`<option value="${Move}">${Move}</option>`);
+const Movementselect= document.getElementById("artmovent-filter");
+Movementselect.innerHTML =
+`<option value="">Corrientes</option>
+
+${movementOptions.join("")}
+`;
+
+const artmovement = [];
+for (const list of data) {
+  const artworkMovement = list.name;
+  artmovement.push(artworkMovement);
+  artmovement.sort();
+}
+console.log(artmovement);
+
+
+
+// console.log(movementOptions);
