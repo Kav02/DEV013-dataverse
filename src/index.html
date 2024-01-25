@@ -1,54 +1,81 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Data Verse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Data Verse</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<header>
-  <h1>ART PLACE</h1>
-</header>
-
-<body>
-  <main>
-    <section id="banner">
+  <body>
+    <main>
+    <header>
+      <h1>ART PLACE</h1>
+    </header>
+    <div id="banner">
       <h2>GALERIA</h2>
       <article>
-        <h3>Filtrar por</h3>
-        <label for="artist-filter"></label>
-        <select data-testid="select-filter" id="artist-filter">
-          <!-- si las opciones sean estaticas(escribir uno por uno,
-          o generada automaticamente de artdata) -->
-          <option value=""> </option>
-        </select>
-        <h3>Ordenar</h3>
-            <select data-testid="select-sort" name="Alfa">
-            <!-- <option value="Alfabeticamente">alfabeticamente</option>  -->
-            <option name="sort-order" value="A-Z">A-Z</option>
-            <option name="sort-order" value="Z-A">Z-A</option>
-            <option name="sort-order" value="asc">menor a mayor</option>
-            <option name="sort-order" value="des">mayor a menor</option>
+        <!-- <h3>FILTRAR POR</h3> -->
+
+        <div class="select">
+          <select data-testid="select-filter" id="artist-filter">
+            <!-- si las opciones sean estaticas(escribir uno por uno,o generada automaticamente de artdata) -->
+            <!-- <option selected disabled>Artistas</option> -->
           </select>
-        
-          <button data-testid="button-clear">
-            <label for="button-clear">Limpiar</label> 
-          </button>
+        </div>
+
+        <div class="select2">
+          <select data-testid="select-filter" id="artmovent-filter">
+            <!-- si las opciones sean estaticas(escribir uno por uno,o generada automaticamente de artdata) -->
+            <option selected disabled>Corrientes</option>
+            <option value="">Opciones de corrientes</option>
+          </select>
+        </div>
+
+        <!-- <h3>ORDENAR POR</h3> -->
+        <nav>
+          <ul class="nav">
+            <li>
+              <a href="#">Ordenar por v</a>
+              <ul>
+                <li>
+                  <a class="opciones" href="#">Año</a>
+                  <ul>
+                    <li><a href="#">1900's</a></li>
+                    <li><a href="#">1800's</a></li>
+                    <li><a href="#">Año</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="opciones" href="#">Alfabeticamente</a>
+                  <ul>
+                    <li><a href="#">A-Z</a></li>
+                    <li><a href="#">Z-A</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <button data-testid="button-clear">Limpiar</button>
       </article>
-    </section>
+    </div>
+
     <section id="root"></section>
-    <section id="detailCard"></section>
-
-    <footer> Korin Amador y Diana Vilchez</footer>
+    
+    <section id="detailCard">
+      <!-- <button id="close-button"> Cerrar </button> -->
+    </section>
+    
   </main>
-  <script src="main.js" type="module"></script>
-</body>
-
+    <footer>Korin Amador y Diana Vilchez</footer>
+    
+    <script src="main.js" type="module"></script>
+  </body>
 </html>
+
