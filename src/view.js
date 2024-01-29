@@ -2,7 +2,6 @@ export const renderItems = (data) => {
 
   const artCard = document.createElement("ul"); //itemscope se utiliza para especificar que el elemento y sus hijos contienen información sobre un solo ítem.
   artCard.setAttribute("itemscope", "");
-
   data.forEach((painting) => {
     const listItem = document.createElement("li");
     listItem.setAttribute("itemtype", "");

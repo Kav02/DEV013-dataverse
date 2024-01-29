@@ -1,6 +1,7 @@
 import { filterData } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import data from "./data/artdata.js";
+import {filterData} from "./dataFunctions.js";
 
 // Genera las tarjetas a partir de renderItems
 const artWorkList = document.querySelector("#root");
@@ -38,12 +39,14 @@ for (const artwork of data) {
   }
 }
 // Incluir lista en las opciones de filtrado
+
 const movementOptions = movementList.map(
   (move) => `<option value="${move}">${move}</option>`
 );
 const movementSelect = document.getElementById("artmovent-filter");
 movementSelect.innerHTML = `<option value="">Corrientes</option>
 ${movementOptions.join("")}`;
+
 
 //Función de filtrar
 //Obtener el artista seleccionado
@@ -56,6 +59,7 @@ document.querySelector("#artist-filter")
     clearScreen.innerHTML= "";
     clearScreen.appendChild(filteredCards); 
   });
+
 
 //Botón limpiar
 function clear_filters() {
@@ -84,3 +88,31 @@ for (const list of data) {
   artMovement.sort();
 }
 console.log(artMovement);*/
+=======
+const movement = [];
+for (const list of data) {
+  const artworkMovement = list.name;
+  movement.push(artworkMovement);
+  movement.sort();
+}
+console.log(movement);
+
+//OBTENER FILTRADO POR CORRIENTES
+
+//extraer o agruparlas las tarjetas con la corriente selecciona
+//sin recargar la pagina , volver a la pagina vacia
+//colocar las tarjetas seleccionadas
+
+movementSelect.addEventListener("change", function () {   //change:se dispara cuando hay una alteración para <select> al valor de un elemento es confirmada por el usuario.
+  const selectedArtMovement = movementSelect.value;
+  // Filtrar y mostrar las tarjetas correspondientes
+  const filterMovement = filterData(data, "artMovement", selectedArtMovement);
+
+  const filteredCards = renderItems(filterMovement);
+
+  const rootfilterMovement = document.getElementById("root");
+  rootfilterMovement.innerHTML = "";      // .innerHTML = "" :se limpia el contenedor antes de agregar nuevas tarjetas
+  // Agregar las tarjetas filtradas al contenedor
+  rootfilterMovement.appendChild(filteredCards);
+});
+
