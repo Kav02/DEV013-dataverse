@@ -1,6 +1,7 @@
 // import { anotherExample } from './dataFunctions.js';
 import { renderItems } from "./view.js";
 import data from "./data/artdata.js";
+import {filterData} from "./dataFunctions.js";
 
 // Genera las tarjetas a partir de renderItems
 const artWorkList = document.getElementById("root");
@@ -50,21 +51,36 @@ console.log(MovementList);
 
 // Incluir lista en las opciones de filtrado
 const movementOptions = MovementList.map( Move =>`<option value="${Move}">${Move}</option>`);
-const Movementselect= document.getElementById("artmovent-filter");
-Movementselect.innerHTML =
+const movementSelect= document.getElementById("artmovent-filter");
+movementSelect.innerHTML =
 `<option value="">Corrientes</option>
 
 ${movementOptions.join("")}
 `;
 
-const artmovement = [];
+const movement = [];
 for (const list of data) {
   const artworkMovement = list.name;
-  artmovement.push(artworkMovement);
-  artmovement.sort();
+  movement.push(artworkMovement);
+  movement.sort();
 }
-console.log(artmovement);
+console.log(movement);
 
+//OBTENER FILTRADO POR CORRIENTES
 
+//extraer o agruparlas las tarjetas con la corriente selecciona
+//sin recargar la pagina , volver a la pagina vacia
+//colocar las tarjetas seleccionadas
 
-// console.log(movementOptions);
+movementSelect.addEventListener("change", function () {   //change:se dispara cuando hay una alteración para <select> al valor de un elemento es confirmada por el usuario.
+  const selectedArtMovement = movementSelect.value;
+  // Filtrar y mostrar las tarjetas correspondientes
+  const filterMovement = filterData(data, "artMovement", selectedArtMovement);
+
+  const filteredCards = renderItems(filterMovement);
+
+  const rootfilterMovement = document.getElementById("root");
+  rootfilterMovement.innerHTML = "";      // .innerHTML = "" :se limpia el contenedor antes de agregar nuevas tarjetas
+  // Agregar las tarjetas filtradas al contenedor
+  rootfilterMovement.appendChild(filteredCards);
+});

@@ -22,19 +22,21 @@
         <!-- <h3>FILTRAR POR</h3> -->
 
         <div class="select">
-          <select data-testid="select-filter" id="artist-filter">
+          <select data-testid="select-filter" id="artist-filter" name="artists">
             <!-- si las opciones sean estaticas(escribir uno por uno,o generada automaticamente de artdata) -->
             <!-- <option selected disabled>Artistas</option> -->
           </select>
         </div>
 
-        <div class="select2">
-          <select data-testid="select-filter" id="artmovent-filter">
+        <div class="select">
+          <!-- <label for="artmovent-filter">Corrientes</label> -->
+          <select data-testid="select-filter" id="artmovent-filter" name="artmovement">
             <!-- si las opciones sean estaticas(escribir uno por uno,o generada automaticamente de artdata) -->
             <option selected disabled>Corrientes</option>
             <option value="">Opciones de corrientes</option>
           </select>
         </div>
+
 
         <!-- <h3>ORDENAR POR</h3> -->
         <nav>
@@ -67,11 +69,12 @@
     </div>
 
     <section id="root"></section>
-    
     <section id="detailCard">
       <!-- <button id="close-button"> Cerrar </button> -->
     </section>
-    
+
+
+    <!-- crear un label -->
   </main>
     <footer>Korin Amador y Diana Vilchez</footer>
     
