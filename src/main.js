@@ -1,7 +1,6 @@
 import { filterData } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import data from "./data/artdata.js";
-import {filterData} from "./dataFunctions.js";
 
 // Genera las tarjetas a partir de renderItems
 const artWorkList = document.querySelector("#root");
@@ -25,7 +24,7 @@ const artistOptions = artistList.map(
 );
 const artistSelect = document.querySelector("#artist-filter"); //Inserta las opciones en el html
 artistSelect.innerHTML = `
-  <option disable selected>Artista</option>
+  <option disable selected>Artistas</option>
   ${artistOptions.join("")}`;
 
 //Crea la lista de Corrientes
@@ -39,12 +38,11 @@ for (const artwork of data) {
   }
 }
 // Incluir lista en las opciones de filtrado
-
 const movementOptions = movementList.map(
   (move) => `<option value="${move}">${move}</option>`
 );
 const movementSelect = document.getElementById("artmovent-filter");
-movementSelect.innerHTML = `<option value="">Corrientes</option>
+movementSelect.innerHTML = `<option disable selected>Corrientes</option>
 ${movementOptions.join("")}`;
 
 
@@ -59,43 +57,6 @@ document.querySelector("#artist-filter")
     clearScreen.innerHTML= "";
     clearScreen.appendChild(filteredCards); 
   });
-
-
-//Botón limpiar
-function clear_filters() {
-  const clearScreen = document.getElementById('root');
-  clearScreen.innerHTML= ""; 
-  clearScreen.appendChild(shortCards);
-  document.getElementById("artist-filter").value = 'Artista';
-  document.getElementById("movement-filter").value = 'Corriente';
-}
-const buttonClear = document.querySelector('[data-testid="button-clear"]');
-buttonClear.addEventListener("click", clear_filters);
-
-/*No se está usando
-const artName = [];
-for (const list of data) {
-  const artworkName = list.name;
-  artName.push(artworkName);
-  artName.sort();
-}
-console.log(artName);*/
-
-/*const artMovement = [];
-for (const list of data) {
-  const artworkMovement = list.artMovement;
-  artMovement.push(artworkMovement);
-  artMovement.sort();
-}
-console.log(artMovement);*/
-=======
-const movement = [];
-for (const list of data) {
-  const artworkMovement = list.name;
-  movement.push(artworkMovement);
-  movement.sort();
-}
-console.log(movement);
 
 //OBTENER FILTRADO POR CORRIENTES
 
@@ -116,3 +77,32 @@ movementSelect.addEventListener("change", function () {   //change:se dispara cu
   rootfilterMovement.appendChild(filteredCards);
 });
 
+//Botón limpiar
+function clear_filters() {
+  const clearScreen = document.getElementById('root');
+  clearScreen.innerHTML= ""; 
+  clearScreen.appendChild(shortCards);
+  document.getElementById("artmovent-filter").value = 'Corrientes';
+  document.getElementById("artist-filter").value = 'Artistas';
+  
+}
+const buttonClear = document.querySelector('[data-testid="button-clear"]');
+buttonClear.addEventListener("click", clear_filters);
+
+
+/*No se está usando
+const artName = [];
+for (const list of data) {
+  const artworkName = list.name;
+  artName.push(artworkName);
+  artName.sort();
+}
+console.log(artName);*/
+
+/*const artMovement = [];
+for (const list of data) {
+  const artworkMovement = list.artMovement;
+  artMovement.push(artworkMovement);
+  artMovement.sort();
+}
+console.log(artMovement);*/
