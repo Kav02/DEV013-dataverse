@@ -58,13 +58,6 @@ movementSelect.innerHTML =
 ${movementOptions.join("")}
 `;
 
-const movement = [];
-for (const list of data) {
-  const artworkMovement = list.name;
-  movement.push(artworkMovement);
-  movement.sort();
-}
-console.log(movement);
 
 //OBTENER FILTRADO POR CORRIENTES
 
@@ -84,3 +77,8 @@ movementSelect.addEventListener("change", function () {   //change:se dispara cu
   // Agregar las tarjetas filtradas al contenedor
   rootfilterMovement.appendChild(filteredCards);
 });
+
+
+// if(paintingsperFilter!== " "){
+//   return tarjetasOrdenadas.sort(paintingsperFilter);
+// }
