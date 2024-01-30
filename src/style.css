@@ -83,6 +83,16 @@ article {
   left: 85%;
 }
 
+#button-statistic {
+    font-family: "JetBrains Mono";
+    font-size: 14px;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    padding: 2px 30px;
+    position: absolute;
+    left: 75%;
+  }
 #root {
   /*todo el cuerpo donde estan las tarjetas*/
   background-color: white;
@@ -376,4 +386,5 @@ dd[itemprop="descriptionDetails"] {
   margin: 0;
   position: relative;
 }
+
 
