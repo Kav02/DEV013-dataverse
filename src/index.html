@@ -29,13 +29,20 @@
 
         <div class="select">
           <!-- <label for="artmovent-filter">Corrientes</label> -->
-          <select data-testid="select-filter" id="artmovent-filter" name="artmovement-filter">
+          <select data-testid="select-filter" id="artmovement-filter" name="artmovement-filter">
             <!-- si las opciones sean estaticas(escribir uno por uno,o generada automaticamente de artdata)
             <option selected disabled>Corriente</option>
             <option value="">Opciones de corrientes</option> -->
           </select>
         </div>
-        <nav>
+        <div class="select">
+        <select data-testid="select-sort" name = "alphabetical-order" id = "alphabetical-order">
+          <option selected disabled>Ordenar</option>
+            <option value="asc">A - Z</option>
+            <option value="desc">Z - A</option>
+        </select>
+      </div>
+        <!-- <nav>
           <ul class="nav">
             <li>
               <a href="#">Ordenar por</a>
@@ -58,7 +65,7 @@
               </ul>
             </li>
           </ul>
-        </nav>
+        </nav> -->
 
         <button data-testid="button-clear">Limpiar</button>
       </article>
