@@ -23,9 +23,8 @@ export const renderItems = (data) => {
       const closeButton = document.createElement("button");
       closeButton.id = "close-button";
       closeButton.textContent = "Cerrar";
+      longCard.appendChild(closeButton);
       detailCard.innerHTML = longCard.outerHTML;
-      detailCard.appendChild(closeButton);
-      
       detailCard.classList.add("show");
       detailCard.querySelector('#close-button').addEventListener('click',()=>
       {
@@ -41,6 +40,7 @@ export const renderItems = (data) => {
     artCard.appendChild(listItem); //Esta coloca todos los valores en la tarjeta
     
   }) ;
+  console.log();
   return artCard;
 };
 export const renderCards = (data) => {
@@ -54,20 +54,23 @@ export const renderCards = (data) => {
     <dt><img itemprop="imageDetails" src="${painting.imageUrl}" alt="${painting.name}"></dd>
           <dt></dt><dd itemprop="nameDetails">${painting.name}</dd>
 
-          <dt></dt><dd itemprop="artistNameDetails" class="contenedor2">Artista: ${painting.facts.artistName}</dd>
-          <dt></dt><dd itemprop="artMovementDetails" class="contenedor2">Corriente: ${painting.facts.artMovement}</dd>
-          <dt></dt><dd itemprop="creationYearDetails" class="contenedor2">Año: ${painting.facts.creationYear}</dd>
+          <dt></dt><dd itemprop="artistNameDetails" class="contenedor2">Artista:${painting.facts.artistName}</dd>
+          <dt></dt><dd itemprop="artMovementDetails" class="contenedor2">Corriente:${painting.facts.artMovement}</dd>
+          <dt></dt><dd itemprop="creationYearDetails" class="contenedor2">Año:${painting.facts.creationYear}</dd>
 
           <dt></dt><dd itemprop="descriptionDetails">${painting.description}</dd>
 
-          <dt></dt><dd itemprop="styleDetails" class="contenedor3">Estilo: ${painting.additionalInformation.style}</dd>
-          <dt></dt><dd itemprop="techniqueDetails" class="contenedor3">Técnica: ${painting.additionalInformation.technique}</dd>
+          <dt></dt><dd itemprop="styleDetails" class="contenedor3">Estilo:${painting.additionalInformation.style}</dd>
+          <dt></dt><dd itemprop="techniqueDetails" class="contenedor3">Técnica:${painting.additionalInformation.technique}</dd>
           <dl>`;
 
     
     longCard.appendChild(listCard); //Esta coloca todos los valores en la tarjeta
+    console.log(longCard)
   });
 
+  console.log();
   return longCard;
 };
 
+{/* <dt></dt><dd itemprop="shortDescriptionDetails">${painting.shortDescription}</dd> */}
