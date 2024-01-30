@@ -1,3 +1,5 @@
+
+
 export const filterData = (data, filterBy, value) => {
   /*Crear filtro por artista en main
 Crear un desplegable recorriendo la información del artdata buscando los artistas para desplegar la lista para que el usario seleccione*/
@@ -13,6 +15,7 @@ Crear un desplegable recorriendo la información del artdata buscando los artist
   
 };
 
+
 //data, filterBy, value
 //Crear filtro por artista en main
 
@@ -23,6 +26,7 @@ Crear un desplegable recorriendo la información del artdata buscando los artist
 //  3- Ordenar (desarrollar aparte)
 //Crear orden
 
+
 export const sortData = (data, sortBy, sortOrder) => {
   const sortedCard = [];
   for (const list of data) {
@@ -32,6 +36,8 @@ export const sortData = (data, sortBy, sortOrder) => {
     } else (sortOrder === "desc")
     {
       sortedCard.sort(((a, b) => b.name.localeCompare(a.name)));
+
+
 
     }
   }
