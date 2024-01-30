@@ -1,4 +1,5 @@
 import { filterData } from "./dataFunctions.js";
+import { computeStats }from "./dataFunctions.js";
 import { sortData } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import data from "./data/artdata.js";
@@ -87,16 +88,20 @@ const buttonClear = document.querySelector('[data-testid="button-clear"]');
 buttonClear.addEventListener("click", clear_filters);
 
 //Ordenar alfabeticamente
-document
-  .querySelector("#alphabetical-order")
-  .addEventListener("change", function (event) {
-    const sortOrder = event.target.value;
-    const sortItems = sortData(data, "Ordenar", sortOrder);
-    const sortedCards = renderItems(sortItems);
-    const rootSorted = document.getElementById("root");
-    rootSorted.innerHTML = ""; // .innerHTML = "" :se limpia el contenedor antes de agregar nuevas tarjetas
-    rootSorted.appendChild(sortedCards);
-  });
+const sortOption= document.querySelector("#alphabetical-order")
+sortOption.addEventListener("change", function (event) {
+  if (document.getElementById("artmovement-filter").value !== "Corrientes" || document.getElementById("artist-filter").value !== "Artistas"){
+  const sortOrder = event.target.value;
+  const sortItems = sortData(data, "Ordenar", sortOrder);
+  const sortedCards = renderItems(sortItems);
+  const rootSorted = document.getElementById("root");
+  rootSorted.innerHTML = ""; // .innerHTML = "" :se limpia el contenedor antes de agregar nuevas tarjetas
+  rootSorted.appendChild(sortedCards);
+}});
+
+
+const buttonStatistic = document.getElementById("button-statistic");
+buttonStatistic.addEventListener("click", computeStats);
 
 /*No se está usando
 const artName = [];

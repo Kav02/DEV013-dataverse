@@ -15,13 +15,26 @@ Crear un desplegable recorriendo la información del artdata buscando los artist
 export const sortData = (data, sortBy, sortOrder) => {
   const sortedCard = [];
   for (const list of data) {
-    sortedCard.push(list);}
+    sortedCard.push(list);
+  }
   if (sortOrder === "asc") {
     sortedCard.sort((a, b) => a.name.localeCompare(b.name));
-  } else {sortOrder === "desc";
+  } else {
+    sortOrder === "desc";
     sortedCard.sort((a, b) => b.name.localeCompare(a.name));
   }
   return sortedCard;
+};
+
+export const statistic = (data) => {
+  const yearArray = [];
+  data.facts.forEach((fact)=> {
+    const creationYear = fact.creationYear;
+    yearArray.push(creationYear);
+  });
+  console.log(yearArray);
+  return yearArray;
+ 
 };
 
 /*No se está usando
