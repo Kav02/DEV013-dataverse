@@ -23,24 +23,6 @@ Crear un desplegable recorriendo la información del artdata buscando los artist
 //  3- Ordenar (desarrollar aparte)
 //Crear orden
 
-
-
-
-// export const sortData = (data, sortBy, sortOrder) => {
-//   const sortedCard = [];
-//   for(const list of data){
-//     sortedCard.push(list);
-//     if(sortOrder === "asc"){
-//       sortedCard.sort(((a,b)=> a.name.localeCompare(b.name)))
-//     }
-//     else(sortOrder === "des")
-//     {
-//       sortedCard.sort(((a,b)=> b.name.localeCompare(a.name)));
-//     }  
-//   }
-//   return sortedCard;
-// };
-
 export const sortData = (data, sortBy, sortOrder) => {
   const sortedCard = [];
   for (const list of data) {

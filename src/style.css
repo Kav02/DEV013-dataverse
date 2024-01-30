@@ -83,16 +83,6 @@ article {
   left: 85%;
 }
 
-#button-clear1 {
-  font-family: "JetBrains Mono";
-  font-size: 14px;
-  color: white;
-  background-color: black;
-  border-radius: 15px;
-  padding: 2px 30px;
-  position: absolute;
-  left: 60%;
-}
 #root {
   /*todo el cuerpo donde estan las tarjetas*/
   background-color: white;
