@@ -29,20 +29,19 @@
 
         <div class="select">
           <!-- <label for="artmovent-filter">Corrientes</label> -->
+
           <select data-testid="select-filter" id="artmovement-filter" name="artmovement-filter">
-            <!-- si las opciones sean estaticas(escribir uno por uno,o generada automaticamente de artdata)
-            <option selected disabled>Corriente</option>
-            <option value="">Opciones de corrientes</option> -->
+            <!-- si las opciones sean estaticas(escribir uno por uno,o generada automaticamente de artdata) -->
           </select>
         </div>
         <div class="select">
-        <select data-testid="select-sort" name = "alphabetical-order" id = "alphabetical-order">
-          <option selected disabled>Ordenar</option>
+          <select data-testid="select-sort" id="alphabetical-order" name="alphabetical-order">
+            <option value="Ordenar" disabled selected>Ordenar</option>
             <option value="asc">A - Z</option>
             <option value="desc">Z - A</option>
-        </select>
-      </div>
-       
+          </select>
+        </div>
+            
       <button data-testid="button-statistic" id="button-statistic">Estadística</button>
         <button data-testid="button-clear" id = "button-clear">Limpiar</button>
       </article>
@@ -64,7 +63,8 @@
 
 
 <!--No se está usando
-<nav>
+
+        <nav>
           <ul class="nav">
             <li>
               <a href="#">Ordenar por</a>
@@ -87,4 +87,14 @@
               </ul>
             </li>
           </ul>
-        </nav> -->
+        </nav>
+
+        <button data-testid="button-clear">Limpiar</button>
+      </article>
+    </div>
+
+    <section id="root"></section>
+    <section id="detailCard">
+       <button id="close-button"> Cerrar </button> -->
+  
+
