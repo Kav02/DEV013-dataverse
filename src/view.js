@@ -1,5 +1,4 @@
 export const renderItems = (data) => {
-
   const artCard = document.createElement("ul"); //itemscope se utiliza para especificar que el elemento y sus hijos contienen información sobre un solo ítem.
   artCard.setAttribute("itemscope", "");
   data.forEach((painting) => {
@@ -17,7 +16,7 @@ export const renderItems = (data) => {
           <dt class="contenedor1"></dt><dd itemprop="shortDescription">${painting.shortDescription}</dd>
         </dl>`;
     // Crea la tarjeta detallada
-    listItem.querySelector('img').addEventListener('click', ()=> {
+    listItem.querySelector("img").addEventListener("click", () => {
       const longCard = renderCards([painting]); // Obtiene la tarjeta detallada para esa pintura
       const detailCard = document.getElementById("detailCard"); // Obtiene el elemento detailCard del html
       const closeButton = document.createElement("button");
@@ -26,22 +25,23 @@ export const renderItems = (data) => {
       longCard.appendChild(closeButton);
       detailCard.innerHTML = longCard.outerHTML;
       detailCard.classList.add("show");
-      detailCard.querySelector('#close-button').addEventListener('click',()=>
-      {
-        detailCard.classList.add("close");
-        setTimeout(() => {
-          detailCard.classList.remove("close");
-          detailCard.innerHTML = '';
-          detailCard.classList.remove ("show");
-        }, 100);
-      });        
-    });  
+      detailCard
+        .querySelector("#close-button")
+        .addEventListener("click", () => {
+          detailCard.classList.add("close");
+          setTimeout(() => {
+            detailCard.classList.remove("close");
+            detailCard.innerHTML = "";
+            detailCard.classList.remove("show");
+          }, 100);
+        });
+    });
     artCard.appendChild(listItem); //Esta coloca todos los valores en la tarjeta
-  }) ;
+  });
   return artCard;
 };
 export const renderCards = (data) => {
-  const longCard = document.createElement("ul"); 
+  const longCard = document.createElement("ul");
   longCard.setAttribute("itemscope", "");
   data.forEach((painting) => {
     const listCard = document.createElement("li");
@@ -61,3 +61,10 @@ export const renderCards = (data) => {
   return longCard;
 };
 
+//Generar la tarjeta con estadística
+export const renderStats = (percentages) => {
+  for (const artMovement in percentages) {
+    const listMove = document.createElement("li");
+    listMove.textContent = `${artMovement}: ${percentages[artMovement]}`;
+  }
+};

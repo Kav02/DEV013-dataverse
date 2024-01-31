@@ -1,5 +1,3 @@
-
-
 export const filterData = (data, filterBy, value) => {
   /*Crear filtro por artista en main
 Crear un desplegable recorriendo la información del artdata buscando los artistas para desplegar la lista para que el usario seleccione*/
@@ -14,7 +12,6 @@ Crear un desplegable recorriendo la información del artdata buscando los artist
   return paintingsperFilter;
 };
 
-
 //data, filterBy, value
 //Crear filtro por artista en main
 
@@ -24,7 +21,6 @@ Crear un desplegable recorriendo la información del artdata buscando los artist
 //  2-Al dar click en el botón limpiar regresa a "home"
 //  3- Ordenar (desarrollar aparte)
 //Crear orden
-
 
 export const sortData = (data, sortBy, sortOrder) => {
   const sortedCard = [];
@@ -40,15 +36,19 @@ export const sortData = (data, sortBy, sortOrder) => {
   return sortedCard;
 };
 
-export const computeStats= (data)=> {
-  const yearArray = [];
-  data.facts.forEach((fact)=> {
-    const creationYear = fact.creationYear;
-    yearArray.push(creationYear);
-  });
-  console.log(yearArray);
-  return yearArray;
- 
+export const computeStats = (data) => {
+  const total = data.length;
+  const count = data.reduce((accumulate, category) => {
+    accumulate[category.facts.artMovement] =
+      (accumulate[category.facts.artMovement] || 0) + 1;
+    return accumulate;
+  }, {});
+  const percentages = {};
+  for (const artMovement in count) {
+    percentages[artMovement] = (count[artMovement] / total) * 100;
+  }
+  console.log(percentages);
+  return percentages;
 };
 
 /*No se está usando

@@ -2,6 +2,7 @@ import { filterData } from "./dataFunctions.js";
 import { sortData } from "./dataFunctions.js"
 import { computeStats } from "./dataFunctions.js"
 import { renderItems } from "./view.js";
+import { renderStats } from "./view.js";
 import data from "./data/artdata.js";
 
 // Genera las tarjetas a partir de renderItems
@@ -96,8 +97,15 @@ document
     rootSorted.appendChild(sortedCards);
   });
 
+//Funcion estadística
+const stats = document.querySelector('#button-stats');
+stats.addEventListener("change", ()=> {
+  const percentages = computeStats(data);
+  const listMove = renderStats(percentages)
+  const statsList = document.getElementById("bars");
+  statsList.appendChild(listMove);
 
-
+})
 
 
 
