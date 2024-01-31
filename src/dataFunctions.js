@@ -40,7 +40,7 @@ export const sortData = (data, sortBy, sortOrder) => {
   return sortedCard;
 };
 
-export const statistic = (data) => {
+export const computeStats= (data)=> {
   const yearArray = [];
   data.facts.forEach((fact)=> {
     const creationYear = fact.creationYear;

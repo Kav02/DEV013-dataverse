@@ -1,5 +1,6 @@
 import { filterData } from "./dataFunctions.js";
 import { sortData } from "./dataFunctions.js"
+import { computeStats } from "./dataFunctions.js"
 import { renderItems } from "./view.js";
 import data from "./data/artdata.js";
 
@@ -43,13 +44,12 @@ for (const artwork of data) {
 const movementOptions = movementList.map(
   (move) => `<option value="${move}">${move}</option>`
 );
-
 const movementSelect = document.getElementById("artmovement-filter");
 movementSelect.innerHTML = `<option disabled selected>Corrientes</option>
 ${movementOptions.join("")}`;
 
 //Función de filtrar
-//Obtener el artista seleccionado
+//Por artista
 document
   .querySelector("#artist-filter")
   .addEventListener("change", function (event) {
@@ -61,20 +61,15 @@ document
     clearScreen.innerHTML = "";
     clearScreen.appendChild(filteredCards);
   });
-
-movementSelect.addEventListener("change", function () {
-  //change:se dispara cuando hay una alteración para <select> al valor de un elemento es confirmada por el usuario.
-  const selectedArtMovement = movementSelect.value;
-  // Filtrar y mostrar las tarjetas correspondientes
-  document.getElementById("artist-filter").value = "Artistas";
+//Por movimiento
+movementSelect.addEventListener("change", function () { //change:se dispara cuando hay una alteración para <select> al valor de un elemento es confirmada por el usuario.
+  document.getElementById("artist-filter").value = "Artistas";//Resetear filtro artistas
+  const selectedArtMovement = movementSelect.value;  // Filtrar y mostrar las tarjetas correspondientes
   const filterMovement = filterData(data, "artMovement", selectedArtMovement);
-
   const filteredCards = renderItems(filterMovement);
-
   const rootfilterMovement = document.getElementById("root");
   rootfilterMovement.innerHTML = ""; // .innerHTML = "" :se limpia el contenedor antes de agregar nuevas tarjetas
-  // Agregar las tarjetas filtradas al contenedor
-  rootfilterMovement.appendChild(filteredCards);
+  rootfilterMovement.appendChild(filteredCards);// Agregar las tarjetas filtradas al contenedor
 });
 
 //Botón limpiar
@@ -101,6 +96,13 @@ document
     rootSorted.appendChild(sortedCards);
   });
 
+
+
+
+
+
+
+  
 /*No se está usando
 const artName = [];
 for (const list of data) {

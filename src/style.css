@@ -83,7 +83,7 @@ article {
   left: 85%;
 }
 
-#button-statistic {
+#button-stats {
     font-family: "JetBrains Mono";
     font-size: 14px;
     color: white;
@@ -177,68 +177,7 @@ footer {
   border-top: 2px solid black;
 }
 
-/*ORDENAR POR*/
-ul {
-  list-style: none;
-  margin-top: -1px;
-  font-family: "JetBrains Mono";
-  font-size: 15px;
 
-}
-
-.nav li a {
-  width: 150px;
-  text-decoration: none;
-  padding: 7px;
-  padding-right: 10px;
-  padding-left: 10px;
-  display: block;
-  color: black;
-  margin-top: 1px;
-  margin-left: -40px;
-}
-
-.nav li a:hover {
-  background-color: #918d8d;
-
-}
-
-a.opciones {
-  background-color: #D9D9D9;
-}
-
-.nav>li {
-  float: left;
-}
-
-.nav li ul {
-  display: none;
-  position: absolute;
-  min-width: 140px;
-  left: 323px;
-
-}
-
-.nav li:hover>ul {
-  display: block;
-  background-color: #D9D9D9;
-  ;
-}
-
-.nav li ul li {
-  position: relative;
-  margin-top: 0px;
-  background-color: #D9D9D9;
-}
-
-.nav li ul li ul {
-  left: 130px;
-  top: 0px;
-  margin-top: -1px;
-
-  background-color: #D9D9D9;
-
-}
 
 /*fILTRAR POR*/
 select {
@@ -303,12 +242,12 @@ option:hover {
 
 /*FICHA DETALLADA*/
 #detailCard {
+  display: flex;
   width: 100%;
   height: 530px;
   margin-top: 4.9%;
   padding: 0;
   padding-left: 0;
-  display: flex;
   background-color: #F6F6EC;
   overflow: hidden;
   border-color: #918d8d;
@@ -390,3 +329,65 @@ dd[itemprop="descriptionDetails"] {
 }
 
 
+/* ORDENAR POR
+ul {
+  list-style: none;
+  margin-top: -1px;
+  font-family: "JetBrains Mono";
+  font-size: 15px;
+
+}
+
+.nav li a {
+  width: 150px;
+  text-decoration: none;
+  padding: 7px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: block;
+  color: black;
+  margin-top: 1px;
+  margin-left: -40px;
+}
+
+.nav li a:hover {
+  background-color: #918d8d;
+
+}
+
+a.opciones {
+  background-color: #D9D9D9;
+}
+
+.nav>li {
+  float: left;
+}
+
+.nav li ul {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+  left: 323px;
+
+}
+
+.nav li:hover>ul {
+  display: block;
+  background-color: #D9D9D9;
+  ;
+}
+
+.nav li ul li {
+  position: relative;
+  margin-top: 0px;
+  background-color: #D9D9D9;
+}
+
+.nav li ul li ul {
+  left: 130px;
+  top: 0px;
+  margin-top: -1px;
+
+  background-color: #D9D9D9;
+
+} */
