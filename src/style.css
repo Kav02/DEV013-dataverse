@@ -58,7 +58,7 @@ h2 {
 
 article {
   /*Filtros */
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color:  rgba(255, 255, 255, 0.9);
   /*para que la opacidad solo afecte al fonfo y no todo lo de adentro*/
   width: 100%;
   margin-top: 76px;
@@ -83,6 +83,16 @@ article {
   left: 85%;
 }
 
+#button-statistic {
+    font-family: "JetBrains Mono";
+    font-size: 14px;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    padding: 2px 30px;
+    position: absolute;
+    left: 70%;
+  }
 #root {
   /*todo el cuerpo donde estan las tarjetas*/
   background-color: white;
@@ -167,8 +177,180 @@ footer {
   border-top: 2px solid black;
 }
 
+
+
+/*fILTRAR POR*/
+select {
+  height: 34px;
+  width: 100%;
+  font-family: "JetBrains Mono";
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+/*provisional, por que no se si mantener los class,aunque tambien puedo cambiarlo por el id de order sin necesidad de borrarlo*/
+.selectorder{
+  height: 34px;
+  width: 10%;
+  font-family: "JetBrains Mono";
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  margin-left:0.5%;
+}
+
+option {
+  height: 350px;
+  background-color: #D9D9D9;
+  width: 500px;
+}
+
+select option {
+  height: 30px;
+  /* Puedes ajustar la altura según tus preferencias */
+  padding: 5px;
+  /* Puedes ajustar el relleno según tus preferencias */
+}
+
+option:hover {
+  background-color: #918d8d;
+}
+
+.show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height:71.5%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: none;
+  z-index: 999;
+ 
+}
+
+.close {
+  display: none;
+}
+
+#close-button {
+  /*position: absolute;right: 100px;top: 200px;*/
+  border-color: #949292;
+  border-width: 5px;
+  border-radius: 15px;
+  align-items: center;
+  cursor: pointer;
+  background-color: #000000;
+  float:right;
+  height: 30px;
+  width: 100px;
+  margin:5px;
+  color: white;
+  padding:2px 25px;
+  /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);  */
+}
+/*FICHA DETALLADA*/
+#detailCard {
+  width: 100%;
+  /* height: 72%; */
+  margin-top: 5%;
+  padding: 0;
+  padding-left: 0;
+  display: flex;
+  background-color: #F6F6EC;
+  overflow: hidden;
+  border-color: #737070;
+  z-index: 1;
+  /*para que la tarjeta salga por encima de lo demas*/
+
+}
+
+/* Nombre de la ficha */
+dd[itemprop="nameDetails"] {
+  font-size: xx-large;
+  font-weight: bold;
+  /*negrita*/
+  right: 80%;
+  margin-bottom: 20px;
+
+  /* margin-top: 3%; */
+}
+
+/* imagen de la ficha */
+#detailCard img {
+  margin: 0 px;
+  padding: 0px;
+  height: 480px;
+  left: 0;
+  float: left;
+
+}
+
+/* el cudrado pequeño 1*/
+#ContenedorDetails dd.contenedor2 {
+  width: 300px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-size: medium;
+  display: inline-block;
+  margin: 0;
+  padding: 5px;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+/* el cudrado pequeño 2*/
+#ContenedorDetails dd.contenedor3 {
+  width: 300px;
+  background-color: rgb(0, 0, 0);
+  margin-top: 0px;
+  color: white;
+  font-size: medium;
+  display: inline-block;
+  padding: 5px;
+  /* display: flex;
+  flex-direction: column; */
+  border: none;
+  margin: 0;
+}
+
+/*descripcion larga*/
+dd[itemprop="descriptionDetails"] {
+  text-align: justify;
+  margin-top: 20px;
+  width: 45%;
+  margin-bottom: 20px;
+  display: flex;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/*dl id ContenedorDetails*/
+#ContenedorDetails {
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  position: relative;
+}
+
+#movementEstadistic{
+  display:none;
+}
+#cardEsta{
+  display: flex;
+  justify-content: center;
+}
+
 /*ORDENAR POR*/
-ul {
+/* ul {
   list-style: none;
   margin-top: -1px;
   font-family: "JetBrains Mono";
@@ -228,158 +410,4 @@ a.opciones {
 
   background-color: #D9D9D9;
 
-}
-
-/*fILTRAR POR*/
-select {
-  height: 34px;
-  width: 100%;
-  font-family: "JetBrains Mono";
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  font-size: 15px;
-  text-align: center;
-  cursor: pointer;
-}
-
-option {
-  height: 350px;
-  background-color: #D9D9D9;
-  width: 500px;
-}
-
-select option {
-  height: 30px;
-  /* Puedes ajustar la altura según tus preferencias */
-  padding: 5px;
-  /* Puedes ajustar el relleno según tus preferencias */
-}
-
-option:hover {
-  background-color: #918d8d;
-}
-
-.show {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  height:auto;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border: none;
-  z-index: 999;
-  
-}
-
-.close {
-  display: none;
-}
-
-/*no se si el estilo funciona*/
-#close-button {
-  /*position: absolute;right: 100px;top: 200px;*/
-  border-color: #949292;
-  border-width: 5px;
-  border-radius: 15px;
-  align-items: center;
-  cursor: pointer;
-  background-color: #000000;
-  float: right;
-  height: 30px;
-  width: 100px;
-  margin:15px;
-  color: white;
-  padding:2px 25px;
-  /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);  */
-}
-
-
-/*FICHA DETALLADA*/
-#detailCard {
-  width: 100%;
-  height: 530px;
-  margin-top: 4.9%;
-  padding: 0;
-  padding-left: 0;
-  display: flex;
-  background-color: #F6F6EC;
-  overflow: hidden;
-  border-color: #737070;
-  z-index: 1;
-  /*para que la tarjeta salga por encima de lo demas*/
-
-}
-
-/* Nombre de la ficha */
-dd[itemprop="nameDetails"] {
-  font-size: xx-large;
-  font-weight: bold;
-  /*negrita*/
-  right: 80%;
-  margin-bottom: 20px;
-
-  /* margin-top: 3%; */
-}
-
-/* imagen de la ficha */
-#detailCard img {
-  margin: 0 px;
-  padding: 0px;
-  height: 470px;
-  left: 0;
-  float: left;
-
-}
-
-/* el cudrado pequeño 1*/
-#ContenedorDetails dd.contenedor2 {
-  width: 300px;
-  background-color: rgb(0, 0, 0);
-  color: white;
-  font-size: medium;
-  display: inline-block;
-  margin: 0;
-  padding: 5px;
-  padding-left: 0;
-  display: flex;
-  flex-direction: column;
-  border: none;
-}
-
-/* el cudrado pequeño 2*/
-#ContenedorDetails dd.contenedor3 {
-  width: 300px;
-  background-color: rgb(0, 0, 0);
-  margin-top: 0px;
-  color: white;
-  font-size: medium;
-  display: inline-block;
-  padding: 5px;
-  /* display: flex;
-  flex-direction: column; */
-  border: none;
-  margin: 0;
-}
-
-/*descripcion larga*/
-dd[itemprop="descriptionDetails"] {
-  text-align: justify;
-  margin-top: 20px;
-  width: 45%;
-  margin-bottom: 20px;
-  display: flex;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-/*dl id ContenedorDetails*/
-#ContenedorDetails {
-  height: 470px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin: 0;
-  position: relative;
-}
-
+} */

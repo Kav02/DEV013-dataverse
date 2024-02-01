@@ -1,3 +1,5 @@
+
+
 export const filterData = (data, filterBy, value) => {
   /*Crear filtro por artista en main
 Crear un desplegable recorriendo la información del artdata buscando los artistas para desplegar la lista para que el usario seleccione*/
@@ -10,8 +12,8 @@ Crear un desplegable recorriendo la información del artdata buscando los artist
     }
   }
   return paintingsperFilter;
-  
 };
+
 
 //data, filterBy, value
 //Crear filtro por artista en main
@@ -23,19 +25,45 @@ Crear un desplegable recorriendo la información del artdata buscando los artist
 //  3- Ordenar (desarrollar aparte)
 //Crear orden
 
+
 export const sortData = (data, sortBy, sortOrder) => {
   const sortedCard = [];
   for (const list of data) {
     sortedCard.push(list);
-    if (sortOrder === "asc"){
-      sortedCard.sort(((a, b) => a.name.localeCompare(b.name)))
-    } else (sortOrder === "desc")
-    {
-      sortedCard.sort(((a, b) => b.name.localeCompare(a.name)));
-
-    }
+  }
+  if (sortOrder === "asc") {
+    sortedCard.sort((a, b) => a.name.localeCompare(b.name));
+  } else {
+    sortOrder === "desc";
+    sortedCard.sort((a, b) => b.name.localeCompare(a.name));
   }
   return sortedCard;
 };
 
+export const computeStats = (data) => {
+  const movementTotal=data.length;
+  const Estadistic= data.reduce((acumulador,movementCount)=>{
+    acumulador[movementCount.facts.artMovement]=(acumulador[movementCount.facts.artMovement]||0)+1;
+    return acumulador;
+  },
+  {});
+  console.log(Estadistic);
 
+  const percentage = {};
+  for (const Move in Estadistic) {
+    percentage[Move] = ((Estadistic[Move] / movementTotal) * 100);
+    // const total = percentage.toFixed(2);
+    // console.log(`"${Move}" ${percentage.toFixed(2)}%`);
+  }
+  console.log(percentage)
+  return percentage;
+}
+
+/*No se está usando
+const artName = [];
+for (const list of data) {
+  const artworkName = list.name;
+  artName.push(artworkName);
+  artName.sort();
+}
+console.log(artName);*/

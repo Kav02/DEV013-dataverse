@@ -1,15 +1,13 @@
-// import { anotherExample } from './dataFunctions.js';
+import { filterData } from "./dataFunctions.js";
+import { sortData } from "./dataFunctions.js"
 import { renderItems } from "./view.js";
 import data from "./data/artdata.js";
-import {filterData} from "./dataFunctions.js";
-import {sortData} from "./dataFunctions.js";
-
+import {computeStats} from "./dataFunctions.js";
 
 // Genera las tarjetas a partir de renderItems
 const artWorkList = document.querySelector("#root");
 const shortCards = renderItems(data); // Agrega las tarjetas al elemento artWorkList
 artWorkList.appendChild(shortCards);
-
 
 //Crea la lista de artistas
 const artistList = []; //Crear array vacio
@@ -43,70 +41,95 @@ for (const artwork of data) {
   }
 }
 // Incluir lista en las opciones de filtrado
-
 const movementOptions = movementList.map(
   (move) => `<option value="${move}">${move}</option>`
 );
-const movementSelect = document.getElementById("artmovent-filter");
+
+const movementSelect = document.getElementById("artmovement-filter");
 movementSelect.innerHTML = `<option disabled selected>Corrientes</option>
 ${movementOptions.join("")}`;
 
 //Función de filtrar
 //Obtener el artista seleccionado
-document.querySelector("#artist-filter")
+document
+  .querySelector("#artist-filter")
   .addEventListener("change", function (event) {
     const artistDisplay = event.target.value;
-    document.getElementById("artmovent-filter").value = 'Corrientes'; //se reinicia el filtro corrientes
+    document.getElementById("artmovement-filter").value = "Corrientes";
     const artistCards = filterData(data, "artistName", artistDisplay);
     const filteredCards = renderItems(artistCards);
     const clearScreen = document.getElementById("root");
-    clearScreen.innerHTML= "";
-    clearScreen.appendChild(filteredCards); 
+    clearScreen.innerHTML = "";
+    clearScreen.appendChild(filteredCards);
   });
 
-//OBTENER FILTRADO POR CORRIENTES
-//extraer o agruparlas las tarjetas con la corriente selecciona
-//sin recargar la pagina , volver a la pagina vacia
-//colocar las tarjetas seleccionadas
-
-movementSelect.addEventListener("change", function () {   //change:se dispara cuando hay una alteración para <select> al valor de un elemento es confirmada por el usuario.
+movementSelect.addEventListener("change", function () {
+  //change:se dispara cuando hay una alteración para <select> al valor de un elemento es confirmada por el usuario.
   const selectedArtMovement = movementSelect.value;
   // Filtrar y mostrar las tarjetas correspondientes
-  document.getElementById("artist-filter").value = 'Artistas';
+  document.getElementById("artist-filter").value = "Artistas";
   const filterMovement = filterData(data, "artMovement", selectedArtMovement);
 
   const filteredCards = renderItems(filterMovement);
 
   const rootfilterMovement = document.getElementById("root");
-  rootfilterMovement.innerHTML = "";      // .innerHTML = "" :se limpia el contenedor antes de agregar nuevas tarjetas
+  rootfilterMovement.innerHTML = ""; // .innerHTML = "" :se limpia el contenedor antes de agregar nuevas tarjetas
   // Agregar las tarjetas filtradas al contenedor
   rootfilterMovement.appendChild(filteredCards);
 });
 
 //Botón limpiar
 function clear_filters() {
-  const clearScreen = document.getElementById('root');
-  clearScreen.innerHTML= ""; 
+  const clearScreen = document.getElementById("root");
+  clearScreen.innerHTML = "";
   clearScreen.appendChild(shortCards);
-  document.getElementById("artmovent-filter").value = 'Corrientes';
-  document.getElementById("artist-filter").value = 'Artistas';
-  document.getElementById("alphabetical-order").value = 'Ordenar';
-  
+  document.getElementById("artist-filter").value = "Artistas";
+  document.getElementById("artmovement-filter").value = "Corrientes";
+  document.getElementById("alphabetical-order").value = "Ordenar";
 }
 const buttonClear = document.querySelector('[data-testid="button-clear"]');
 buttonClear.addEventListener("click", clear_filters);
 
-//ORDENAR ALFABETICAMENTE
-document.querySelector("#alphabetical-order").addEventListener("change", function (event) {
-  const sortOrder = event.target.value;
-  const sortItems = sortData(data,"Ordenar", sortOrder);
-  console.log(sortItems);
-  const sortedCards = renderItems(sortItems);
-  const rootSorted = document.getElementById("root");
-  rootSorted.innerHTML = "";      // .innerHTML = "" :se limpia el contenedor antes de agregar nuevas tarjetas
-  rootSorted.appendChild(sortedCards);
-});
+//Ordenar alfabeticamente
+document
+  .querySelector("#alphabetical-order")
+  .addEventListener("change", function (event) {
+    const sortOrder = event.target.value;
+    const sortItems = sortData(data, "Ordenar", sortOrder);
+    const sortedCards = renderItems(sortItems);
+    const rootSorted = document.getElementById("root");
+    rootSorted.innerHTML = ""; // .innerHTML = "" :se limpia el contenedor antes de agregar nuevas tarjetas
+    rootSorted.appendChild(sortedCards);
+  });
+  
+//ESTADISTICA
+const dataEstadistic = computeStats(data);
+const selectEstadistic = document.getElementById("movementEstadistic");
+document
+  .querySelector("#button-statistic")
+  .addEventListener("click", function () {
+    if (selectEstadistic.style.display === "block") {
+      selectEstadistic.style.display = "none";
+      selectEstadistic.innerHTML = "";
+    } else {
+      selectEstadistic.style.display = "block";
 
+      Object.entries(dataEstadistic).forEach(([key, value]) => {
+        const cardEsta = document.createElement("div");
+        cardEsta.id = "cardEsta";
+        cardEsta.textContent = `${key} ${value} %`;
+        selectEstadistic.appendChild(cardEsta);
+
+        //revisar la consola antes de terminar(se crea una lista por cada objeto)
+        // console.log(selectEstadistic);
+      });
+    }
+  });
+// const StatsChart = dataEstadistic.map((moveEstadistic)=>`<li>${moveEstadistic}</li>`);
+// const windowEstadistic=document.querySelector("#movementEstadistic");
+// windowEstadistic.innerHTML=`<li> ${StatsChart.join("")}`;
+
+// console.log(computeStats(data));
 
 
 /*No se está usando
