@@ -73,25 +73,54 @@ article {
 }
 
 #button-clear {
-  font-family: "JetBrains Mono";
-  font-size: 14px;
-  color: white;
-  background-color: black;
-  border-radius: 15px;
-  padding: 2px 30px;
-  position: absolute;
-  left: 85%;
+    font-family: "JetBrains Mono";
+    color:white;
+    background-color: #000000;
+    border-radius: 20px;
+    border-color: #F8F8F1;
+    padding: 2px 5px;
+    position: absolute;
+    left: 85%;
+    height:30px;
+    width: 100px;
+    box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.63);
 }
+#button-clear:hover{
+  background-color:#706e6e;
+    transition: 0.3s;
+  }
+
+/* .material-symbols-outlined{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  color:white;
+} */
 
 #button-statistic {
-    font-family: "JetBrains Mono";
-    font-size: 14px;
-    color: white;
-    background-color: black;
-    border-radius: 15px;
-    padding: 2px 30px;
+    color: rgb(0, 0, 0);
+    background-color: #929191;
+    border-radius: 30%;
+    border-color: #F8F8F1;
+    padding: 2px 5px;
     position: absolute;
-    left: 70%;
+    left: 35%;
+    height:30px;
+    box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.63);
+  }
+  #button-statistic:hover{
+    background-color:#cacbcb;
+      transition: 0.3s;
+  }
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    color: black;
   }
 #root {
   /*todo el cuerpo donde estan las tarjetas*/
@@ -343,11 +372,18 @@ dd[itemprop="descriptionDetails"] {
 
 #movementEstadistic{
   display:none;
+  font-family: "JetBrains Mono";
+  margin-top:40px;
+  font-weight: bold;
 }
 #cardEsta{
+  margin:8px;
   display: flex;
   justify-content: center;
 }
+
+
+
 
 /*ORDENAR POR*/
 /* ul {

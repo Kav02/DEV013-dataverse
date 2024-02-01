@@ -40,6 +40,7 @@ export const sortData = (data, sortBy, sortOrder) => {
   return sortedCard;
 };
 
+
 export const computeStats = (data) => {
   const movementTotal=data.length;
   const Estadistic= data.reduce((acumulador,movementCount)=>{
