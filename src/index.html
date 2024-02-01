@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"rel="stylesheet"/>
     <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -41,9 +43,19 @@
             <option value="desc">Z - A</option>
           </select>
         </div>
-            
-        <button data-testid="button-stats" id="button-stats">Estadística</button>
-        <button data-testid="button-clear" id = "button-clear">Limpiar</button>
+
+       
+        
+      <button data-testid="button-statistic" id="button-statistic">
+        <span class="material-symbols-outlined">
+          bar_chart
+          </span> 
+      </button>
+        <button data-testid="button-clear" id = "button-clear">Limpiar
+          <!-- <span class="material-symbols-outlined">
+            refresh
+            </span> -->
+        </button>
       </article>
     </div>
     <section id="movementEstadistic"></section>
