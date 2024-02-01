@@ -58,7 +58,8 @@ export const computeStats = (data) => {
   }
   console.log(percentage)
   return percentage;
-}
+};
+
 
 /*No se está usando
 const artName = [];
