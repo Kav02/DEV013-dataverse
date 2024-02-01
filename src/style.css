@@ -346,7 +346,9 @@ dd[itemprop="descriptionDetails"] {
 }
 #cardEsta{
   display: flex;
-  justify-content: center;
+  text-align: left;
+  font-family: "JetBrains Mono";
+  font-size: small;
 }
 
 /*ORDENAR POR*/

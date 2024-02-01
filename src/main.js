@@ -1,9 +1,6 @@
-import { filterData } from "./dataFunctions.js";
-import { sortData } from "./dataFunctions.js"
-import { computeStats } from "./dataFunctions.js"
+import { filterData, sortData, computeStats } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import data from "./data/artdata.js";
-import {computeStats} from "./dataFunctions.js";
 
 // Genera las tarjetas a partir de renderItems
 const artWorkList = document.querySelector("#root");
@@ -63,14 +60,15 @@ document
     clearScreen.appendChild(filteredCards);
   });
 //Por movimiento
-movementSelect.addEventListener("change", function () { //change:se dispara cuando hay una alteración para <select> al valor de un elemento es confirmada por el usuario.
-  document.getElementById("artist-filter").value = "Artistas";//Resetear filtro artistas
-  const selectedArtMovement = movementSelect.value;  // Filtrar y mostrar las tarjetas correspondientes
+movementSelect.addEventListener("change", function () {
+  //change:se dispara cuando hay una alteración para <select> al valor de un elemento es confirmada por el usuario.
+  document.getElementById("artist-filter").value = "Artistas"; //Resetear filtro artistas
+  const selectedArtMovement = movementSelect.value; // Filtrar y mostrar las tarjetas correspondientes
   const filterMovement = filterData(data, "artMovement", selectedArtMovement);
   const filteredCards = renderItems(filterMovement);
   const rootfilterMovement = document.getElementById("root");
   rootfilterMovement.innerHTML = ""; // .innerHTML = "" :se limpia el contenedor antes de agregar nuevas tarjetas
-  rootfilterMovement.appendChild(filteredCards);// Agregar las tarjetas filtradas al contenedor
+  rootfilterMovement.appendChild(filteredCards); // Agregar las tarjetas filtradas al contenedor
 });
 
 //Botón limpiar
@@ -96,12 +94,12 @@ document
     rootSorted.innerHTML = ""; // .innerHTML = "" :se limpia el contenedor antes de agregar nuevas tarjetas
     rootSorted.appendChild(sortedCards);
   });
-  
+
 //ESTADISTICA
 const dataEstadistic = computeStats(data);
 const selectEstadistic = document.getElementById("movementEstadistic");
 document
-  .querySelector("#button-statistic")
+  .querySelector("#button-stats")
   .addEventListener("click", function () {
     if (selectEstadistic.style.display === "block") {
       selectEstadistic.style.display = "none";
@@ -112,41 +110,20 @@ document
       Object.entries(dataEstadistic).forEach(([key, value]) => {
         const cardEsta = document.createElement("div");
         cardEsta.id = "cardEsta";
-        cardEsta.textContent = `${key} ${value} %`;
+        cardEsta.innerHTML = `${key}:     ${value} % ${graphIcon(value)}`;
         selectEstadistic.appendChild(cardEsta);
 
         //revisar la consola antes de terminar(se crea una lista por cada objeto)
-        // console.log(selectEstadistic);
       });
     }
   });
-// const StatsChart = dataEstadistic.map((moveEstadistic)=>`<li>${moveEstadistic}</li>`);
-// const windowEstadistic=document.querySelector("#movementEstadistic");
-// windowEstadistic.innerHTML=`<li> ${StatsChart.join("")}`;
 
-// console.log(computeStats(data));
-
-
-
-
-
-
-
-
-  
-/*No se está usando
-const artName = [];
-for (const list of data) {
-  const artworkName = list.name;
-  artName.push(artworkName);
-  artName.sort();
+// Función para generar el icono
+function graphIcon(count) {
+  let icon = "";
+  for (let i = 0; i < count; i++) {
+    icon += "■";
+  }
+  return icon;
 }
-console.log(artName);*/
 
-/*const artMovement = [];
-for (const list of data) {
-  const artworkMovement = list.artMovement;
-  artMovement.push(artworkMovement);
-  artMovement.sort();
-}
-console.log(artMovement);*/

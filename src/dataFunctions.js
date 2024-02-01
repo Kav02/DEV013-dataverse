@@ -37,7 +37,9 @@ export const sortData = (data, sortBy, sortOrder) => {
     sortOrder === "desc";
     sortedCard.sort((a, b) => b.name.localeCompare(a.name));
   }
+  console.log(sortedCard)
   return sortedCard;
+  
 };
 
 
@@ -53,8 +55,6 @@ export const computeStats = (data) => {
   const percentage = {};
   for (const Move in Estadistic) {
     percentage[Move] = ((Estadistic[Move] / movementTotal) * 100);
-    // const total = percentage.toFixed(2);
-    // console.log(`"${Move}" ${percentage.toFixed(2)}%`);
   }
   console.log(percentage)
   return percentage;
