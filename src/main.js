@@ -3,6 +3,7 @@ import { sortData } from "./dataFunctions.js"
 import { computeStats } from "./dataFunctions.js"
 import { renderItems } from "./view.js";
 import data from "./data/artdata.js";
+import {computeStats} from "./dataFunctions.js";
 
 // Genera las tarjetas a partir de renderItems
 const artWorkList = document.querySelector("#root");
@@ -95,6 +96,36 @@ document
     rootSorted.innerHTML = ""; // .innerHTML = "" :se limpia el contenedor antes de agregar nuevas tarjetas
     rootSorted.appendChild(sortedCards);
   });
+  
+//ESTADISTICA
+const dataEstadistic = computeStats(data);
+const selectEstadistic = document.getElementById("movementEstadistic");
+document
+  .querySelector("#button-statistic")
+  .addEventListener("click", function () {
+    if (selectEstadistic.style.display === "block") {
+      selectEstadistic.style.display = "none";
+      selectEstadistic.innerHTML = "";
+    } else {
+      selectEstadistic.style.display = "block";
+
+      Object.entries(dataEstadistic).forEach(([key, value]) => {
+        const cardEsta = document.createElement("div");
+        cardEsta.id = "cardEsta";
+        cardEsta.textContent = `${key} ${value} %`;
+        selectEstadistic.appendChild(cardEsta);
+
+        //revisar la consola antes de terminar(se crea una lista por cada objeto)
+        // console.log(selectEstadistic);
+      });
+    }
+  });
+// const StatsChart = dataEstadistic.map((moveEstadistic)=>`<li>${moveEstadistic}</li>`);
+// const windowEstadistic=document.querySelector("#movementEstadistic");
+// windowEstadistic.innerHTML=`<li> ${StatsChart.join("")}`;
+
+// console.log(computeStats(data));
+
 
 
 

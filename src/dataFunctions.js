@@ -40,16 +40,26 @@ export const sortData = (data, sortBy, sortOrder) => {
   return sortedCard;
 };
 
-export const computeStats= (data)=> {
-  const yearArray = [];
-  data.facts.forEach((fact)=> {
-    const creationYear = fact.creationYear;
-    yearArray.push(creationYear);
-  });
-  console.log(yearArray);
-  return yearArray;
- 
+
+export const computeStats = (data) => {
+  const movementTotal=data.length;
+  const Estadistic= data.reduce((acumulador,movementCount)=>{
+    acumulador[movementCount.facts.artMovement]=(acumulador[movementCount.facts.artMovement]||0)+1;
+    return acumulador;
+  },
+  {});
+  console.log(Estadistic);
+
+  const percentage = {};
+  for (const Move in Estadistic) {
+    percentage[Move] = ((Estadistic[Move] / movementTotal) * 100);
+    // const total = percentage.toFixed(2);
+    // console.log(`"${Move}" ${percentage.toFixed(2)}%`);
+  }
+  console.log(percentage)
+  return percentage;
 };
+
 
 /*No se está usando
 const artName = [];
