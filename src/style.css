@@ -100,7 +100,7 @@ article {
 } */
 
 
-#button-statistic {
+#button-stats {
     color: rgb(0, 0, 0);
     background-color: #929191;
     border-radius: 30%;
@@ -111,7 +111,7 @@ article {
     height:30px;
     box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.63);
   }
-  #button-statistic:hover{
+  #button-stats:hover{
     background-color:#cacbcb;
       transition: 0.3s;
   }
@@ -209,7 +209,7 @@ footer {
 
 
 
-/*fILTRAR POR*/
+/*FILTRAR POR*/
 select {
   height: 34px;
   width: 100%;
@@ -241,9 +241,7 @@ option {
 
 select option {
   height: 30px;
-  /* Puedes ajustar la altura según tus preferencias */
   padding: 5px;
-  /* Puedes ajustar el relleno según tus preferencias */
 }
 
 option:hover {
@@ -451,7 +449,7 @@ a.opciones {
 
 
 } */
-=======
+
 /* ORDENAR POR
 ul {
   list-style: none;

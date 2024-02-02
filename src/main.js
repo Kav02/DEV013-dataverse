@@ -55,6 +55,7 @@ document
   .addEventListener("change", function (event) {
     const artistDisplay = event.target.value;
     document.getElementById("artmovement-filter").value = "Corrientes";
+    document.getElementById("alphabetical-order").value = "Ordenar";
     const artistCards = filterData(data, "artistName", artistDisplay);
     currentData = [...artistCards];
     const filteredCards = renderItems(artistCards);
@@ -66,8 +67,10 @@ document
 movementSelect.addEventListener("change", function () {
   //change:se dispara cuando hay una alteración para <select> al valor de un elemento es confirmada por el usuario.
   document.getElementById("artist-filter").value = "Artistas"; //Resetear filtro artistas
+  document.getElementById("alphabetical-order").value = "Ordenar";
   const selectedArtMovement = movementSelect.value; // Filtrar y mostrar las tarjetas correspondientes
   const filterMovement = filterData(data, "artMovement", selectedArtMovement);
+  currentData = [...filterMovement];
   const filteredCards = renderItems(filterMovement);
   const rootfilterMovement = document.getElementById("root");
   rootfilterMovement.innerHTML = ""; // .innerHTML = "" :se limpia el contenedor antes de agregar nuevas tarjetas
@@ -113,13 +116,8 @@ document
       Object.entries(dataEstadistic).forEach(([key, value]) => {
         const cardEsta = document.createElement("div");
         cardEsta.id = "cardEsta";
-        const graph = document.createElement("div");
-        graph.id = "graph";
-        cardEsta.innerHTML = `${key}:${value} % <div>${graphIcon(value)}</div>`;
-
+        cardEsta.innerHTML = `${key}:${value}%  <div id = graph>${graphIcon(value)}</div>`;
         selectEstadistic.appendChild(cardEsta);
-        selectEstadistic.appendChild(graph);
-
         //revisar la consola antes de terminar(se crea una lista por cada objeto)
       });
     }
