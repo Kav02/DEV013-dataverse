@@ -114,10 +114,17 @@ document
       selectEstadistic.style.display = "block";
 
       Object.entries(dataEstadistic).forEach(([key, value]) => {
-        const cardEsta = document.createElement("div");
-        cardEsta.id = "cardEsta";
-        cardEsta.innerHTML = `${key}:${value}%  <div id = graph>${graphIcon(value)}</div>`;
-        selectEstadistic.appendChild(cardEsta);
+        const container = document.createElement("div");
+        container.id = "container";
+        // const cardEsta = document.createElement("div");
+        // cardEsta.id = "cardEsta";
+        // const graph = document.createElement("div");
+        // graph.id = "graph";
+        container.innerHTML = `<div id="cardEsta">${key}:${value} % </div><div id="graph">${graphIcon(value)}</div>`;
+
+        selectEstadistic.appendChild(container);
+        
+
         //revisar la consola antes de terminar(se crea una lista por cada objeto)
       });
     }
@@ -126,10 +133,13 @@ document
 function graphIcon(count) {
   let icon = "";
   for (let i = 0; i < count; i++) {
-    icon += "■";
+    icon += "<span style='color: black; font-size: 35px;'>■</span>";
+
   }
   return icon;
 }
+const iconContainer = document.getElementById("iconContainer");
+iconContainer.innerHTML = graphIcon();
 
 // const StatsChart = dataEstadistic.map((moveEstadistic)=>`<li>${moveEstadistic}</li>`);
 // const windowEstadistic=document.querySelector("#movementEstadistic");
