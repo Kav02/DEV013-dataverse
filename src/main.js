@@ -1,12 +1,11 @@
-import { filterData } from "./dataFunctions.js";
-import { sortData } from "./dataFunctions.js"
-import { computeStats } from "./dataFunctions.js"
+import { filterData, sortData, computeStats } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
-import { renderStats } from "./view.js";
 import data from "./data/artdata.js";
 
 // Genera las tarjetas a partir de renderItems
 const artWorkList = document.querySelector("#root");
+
+let currentData = [...data];
 const shortCards = renderItems(data); // Agrega las tarjetas al elemento artWorkList
 artWorkList.appendChild(shortCards);
 
@@ -56,21 +55,26 @@ document
   .addEventListener("change", function (event) {
     const artistDisplay = event.target.value;
     document.getElementById("artmovement-filter").value = "Corrientes";
+    document.getElementById("alphabetical-order").value = "Ordenar";
     const artistCards = filterData(data, "artistName", artistDisplay);
+    currentData = [...artistCards];
     const filteredCards = renderItems(artistCards);
     const clearScreen = document.getElementById("root");
     clearScreen.innerHTML = "";
     clearScreen.appendChild(filteredCards);
   });
 //Por movimiento
-movementSelect.addEventListener("change", function () { //change:se dispara cuando hay una alteración para <select> al valor de un elemento es confirmada por el usuario.
-  document.getElementById("artist-filter").value = "Artistas";//Resetear filtro artistas
-  const selectedArtMovement = movementSelect.value;  // Filtrar y mostrar las tarjetas correspondientes
+movementSelect.addEventListener("change", function () {
+  //change:se dispara cuando hay una alteración para <select> al valor de un elemento es confirmada por el usuario.
+  document.getElementById("artist-filter").value = "Artistas"; //Resetear filtro artistas
+  document.getElementById("alphabetical-order").value = "Ordenar";
+  const selectedArtMovement = movementSelect.value; // Filtrar y mostrar las tarjetas correspondientes
   const filterMovement = filterData(data, "artMovement", selectedArtMovement);
+  currentData = [...filterMovement];
   const filteredCards = renderItems(filterMovement);
   const rootfilterMovement = document.getElementById("root");
   rootfilterMovement.innerHTML = ""; // .innerHTML = "" :se limpia el contenedor antes de agregar nuevas tarjetas
-  rootfilterMovement.appendChild(filteredCards);// Agregar las tarjetas filtradas al contenedor
+  rootfilterMovement.appendChild(filteredCards); // Agregar las tarjetas filtradas al contenedor
 });
 
 //Botón limpiar
@@ -90,27 +94,51 @@ document
   .querySelector("#alphabetical-order")
   .addEventListener("change", function (event) {
     const sortOrder = event.target.value;
-    const sortItems = sortData(data, "Ordenar", sortOrder);
+    const sortItems = sortData(currentData, "Ordenar", sortOrder);
     const sortedCards = renderItems(sortItems);
     const rootSorted = document.getElementById("root");
     rootSorted.innerHTML = ""; // .innerHTML = "" :se limpia el contenedor antes de agregar nuevas tarjetas
     rootSorted.appendChild(sortedCards);
   });
 
-//Funcion estadística
-const stats = document.querySelector('#button-stats');
-stats.addEventListener("change", ()=> {
-  const percentages = computeStats(data);
-  const listMove = renderStats(percentages)
-  const statsList = document.getElementById("bars");
-  statsList.appendChild(listMove);
+//ESTADISTICA
+const dataEstadistic = computeStats(data);
+const selectEstadistic = document.getElementById("movementEstadistic");
+document.querySelector("#button-stats").addEventListener("click", function () {
+  if (selectEstadistic.style.display === "flex") {
+    selectEstadistic.style.display = "none";
+    // selectEstadistic.innerHTML = "";
+  } else {
+    selectEstadistic.style.display = "flex";
+    const stats = document.getElementById("stats");
+    const graphs = document.getElementById("graphs");
+    if (stats.childElementCount === 0) {
+      Object.entries(dataEstadistic).forEach(([key, value]) => {
+        const cardEsta = document.createElement("div");
+        cardEsta.id = "cardEsta";
+        cardEsta.innerHTML = `${key}: ${value} %`;
 
-})
+        const graph = document.createElement("div");
+        graph.id = "graph";
+        graph.innerHTML = graphIcon(value);
 
+        stats.appendChild(cardEsta);
+        graphs.appendChild(graph);
+      });
+    }
+  }
+});
 
+function graphIcon(count) {
+  let icon = "";
+  for (let i = 0; i < count; i++) {
+    icon += `<span class = "dots">■</span>`;
+  }
+  return icon;
+}
+// const iconContainer = document.getElementById("iconContainer");
+// iconContainer.innerHTML = graphIcon();
 
-
-  
 /*No se está usando
 const artName = [];
 for (const list of data) {

@@ -3,7 +3,7 @@ export const renderItems = (data) => {
   artCard.setAttribute("itemscope", "");
   data.forEach((painting) => {
     const listItem = document.createElement("li");
-    listItem.setAttribute("itemtype", "");
+    listItem.setAttribute('itemtype', "");
 
     /* ` se utiliza para delimitar las plantillas de cadena, y ${}` se utiliza para insertar expresiones en esas plantillas de cadena.
     dt: description term y dd: description details. El dt está vacio porque no queremos mostrar el nombre de la caracteristica solo el dato*/

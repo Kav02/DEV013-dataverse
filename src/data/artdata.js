@@ -91,8 +91,7 @@ export default [
     "id": "viva-la-vida",
     "name": "Viva la Vida",
     "shortDescription": "Composición surrealista con elementos simbólicos",
-    "description":
-        "Viva la vida es un cuadro significativo, reconocido como la última obra de Frida Kahlo. A pesar de su salud deteriorada, el título de esta pintura rinde homenaje a la vida. Las frutas y la forma en que están representadas son emocionantes, destacándose el vibrante color rojo de las sandías y la frase que la artista escribió ocho días antes de su fallecimiento.",
+    "description": "Viva la Vida es un cuadro significativo y reconocido como la última obra de Frida Kahlo. A pesar de enfrentar una salud deteriorada, el título de esta pintura rinde un emotivo homenaje a la vida. Las frutas y la forma en que están representadas despiertan una emotividad especial, destacando el color rojo de las sandías. La frase que la artista escribió añade una capa adicional de profundidad y significado a la obra, convirtiéndola en un testimonio conmovedor de la conexión entre el arte y la existencia, marcando así un hito importante en la carrera de Kahlo.",
     "imageUrl": "https://cdn.jsdelivr.net/gh/Kav02/DEV013-dataverse/src/Imagenes/Viva-la-Vida.jpg",
     "facts": {
         "artistName": "Frida Kahlo",
@@ -109,8 +108,7 @@ export default [
     "id": "noche-estrellada",
     "name": "La Noche Estrellada",
     "shortDescription": "Paisaje nocturno con cielo estrellado",
-    "description":
-        "La Noche Estrellada es una obra maestra de Van Gogh que captura la belleza del cielo nocturno. Con pinceladas intensas y ondulantes, Van Gogh representa un paisaje estrellado sobre un pueblo tranquilo. La obra refleja la fascinación del artista por el cosmos y su habilidad para transmitir emociones a través del color. Esta pintura es un testimonio de la genialidad de Van Gogh en la representación de la naturaleza.",
+    "description": "La Noche Estrellada es una obra maestra que captura la belleza del cielo nocturno. Con pinceladas intensas y ondulantes, Van Gogh representa un paisaje estrellado sobre un pueblo tranquilo. La obra refleja la fascinación del artista por el cosmos y su habilidad para transmitir emociones a través del color. Esta pintura es un testimonio de la genialidad de Van Gogh en la representación de la naturaleza. La combinación de colores vibrantes y la expresividad de las formas revela la profunda conexión de Van Gogh con la belleza celestial, marcando esta obra como un hito en la historia del arte.",
     "imageUrl": "https://cdn.jsdelivr.net/gh/Kav02/DEV013-dataverse/src/Imagenes/La-noche-estrellada.jpg",
     "facts": {
         "artistName": "Vincent van Gogh",
