@@ -5,9 +5,11 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  /*propiedad de prueba en menus*/
+  }
+main{
+  display:flex;
+  flex-direction: column;
 }
-
 h1 {
   /*ART PLACE*/
   font-family: "Ubuntu";
@@ -29,7 +31,6 @@ h1 {
 #banner {
   /*galeria,filtros,img*/
   background-image: url("./Imagenes/imagen\ fondo.jpg");
-
   background-size: cover;
   /*para que la imagen se acome al contenedor*/
   width: 100%;
@@ -46,82 +47,112 @@ h1 {
  } */
 h2 {
   /*Galeria*/
-  font-family: "JetBrains Mono";
-  background-color: #f5f1e5;
-  width: 25%;
-  font-size: 35px;
-  text-align: center;
-  position: absolute;
-  margin-top: 14px;
+    font-family: "JetBrains Mono";
+    background-color: #f5f1e5;
+    width:max-content;
+    padding-right:8vw;
+    padding-left: 8vw;
+    font-size: 200%;
+    text-align: center;
+    position: absolute;
+    margin-top: 14px;
+  
+  }
 
-}
 
 article {
   /*Filtros */
-  background-color:  rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.7);
   /*para que la opacidad solo afecte al fonfo y no todo lo de adentro*/
   width: 100%;
   margin-top: 76px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   position: absolute;
-  align-items: center;
-  /*se alinea verticalmente*/
-  height: 30%;
+  align-items: flex-start;  /*se alinea verticalmente*/
+  height: auto;
   border-bottom-style: double;
   border-width: 1px;
+
+  }
+.select-menu,
+.buttons{
+  flex: 1;
+}
+.select-menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  min-width: 150px;
+  width: fit-content;
+  
+}
+.buttons {
+  display: flex;
+  justify-content:space-between ;
+  height: 34px;
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  align-items: center;
+  width: fit-content;
+  padding-left: 10vw;
+  padding-right: 2vw;
+  
+}
+ @media screen and (max-width: 950px) {
+  .select-menu {
+    flex-basis: 100%; 
+    order: 1; 
+  }
+  .buttons {
+    width: 100%; 
+    order: 2; 
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  #button-stats{
+    margin-right: 15%;
+  }
+  #stats, #graphs{
+   margin-top: 50px;
+  }
+  
 }
 
 #button-clear {
-    font-family: "JetBrains Mono";
-    color:white;
-    background-color: #000000;
-    border-radius: 20px;
-    border-color: #F8F8F1;
-    padding: 2px 5px;
-    position: absolute;
-    left: 85%;
-    height:30px;
-    width: 100px;
-    box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.63);
-}
-#button-clear:hover{
-  background-color:#706e6e;
-    transition: 0.3s;
+  font-family: "JetBrains Mono";
+  font-size: 14px;
+  color: white;
+  background-color: black;
+  border-radius: 15px;
+  padding: 2px 30px;
+  
   }
 
-/* .material-symbols-outlined{
+#button-stats {
+  color: rgb(0, 0, 0);
+  background-color: #929191;
+  border-radius: 30%;
+  border-color: #F8F8F1;
+  padding: 2px 5px;
+  height:30px;
+  box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.63);  
+  }
+#button-stats:hover{
+  background-color:#cacbcb;
+  transition: 0.3s;
+  }
+.material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
   'wght' 400,
   'GRAD' 0,
   'opsz' 24;
-  color:white;
-} */
-
-
-#button-stats {
-    color: rgb(0, 0, 0);
-    background-color: #929191;
-    border-radius: 30%;
-    border-color: #F8F8F1;
-    padding: 2px 5px;
-    position: absolute;
-    left: 35%;
-    height:30px;
-    box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.63);
-  }
-  #button-stats:hover{
-    background-color:#cacbcb;
-      transition: 0.3s;
-  }
-  .material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
-    color: black;
+  color: black;
   }
 #root {
   /*todo el cuerpo donde estan las tarjetas*/
@@ -132,14 +163,17 @@ article {
   /*distancia entre columnas*/
   display: inline-block;
   /* Asegura que las tarjetas se comporten como bloques en línea */
-  /* padding: 6vw; */
+  padding-right: 4vw; 
+  padding-left: 3vw ;
   list-style: none;
   /*para que los puntitos desaparezcan*/
   margin-top: 50px;
   margin-bottom: 20px;
 }
 
-#ContenedorTarjeta {
+
+#cardContainer {
+ {
   /*tarjetas independientes*/
   background-color: #F8F8F1;
   max-width: 100%;
@@ -193,8 +227,7 @@ dd[itemprop="name"] {
 
 footer {
   font-family: "JetBrains Mono";
-  /* width: 100%; */
-  padding: 10px;
+  width: 100%;
   font-size: 15px;
   text-align: right;
   border-top: 2px solid black;
@@ -203,27 +236,18 @@ footer {
 
 
 /*FILTRAR POR*/
+label{
+  display: none;
+}
 select {
   height: 34px;
   width: 100%;
   font-family: "JetBrains Mono";
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
   border: none;
   font-size: 15px;
   text-align: center;
   cursor: pointer;
-}
-/*provisional, por que no se si mantener los class,aunque tambien puedo cambiarlo por el id de order sin necesidad de borrarlo*/
-.selectorder{
-  height: 34px;
-  width: 10%;
-  font-family: "JetBrains Mono";
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  font-size: 15px;
-  text-align: center;
-  cursor: pointer;
-  margin-left:0.5%;
 }
 
 option {
@@ -235,6 +259,7 @@ option {
 select option {
   height: 30px;
   padding: 5px;
+  
 }
 
 option:hover {
@@ -266,6 +291,7 @@ option:hover {
   position: fixed;
   top: 50%;
   left: 50%;
+
   /* height:80%; */
   /* padding-bottom: 15vw; */
   transform: translate(-50%, -50%);
@@ -276,6 +302,7 @@ option:hover {
   margin-top: 7vh;
   width: 100%; 
  
+
 }
 
 .close {
@@ -290,14 +317,15 @@ option:hover {
   align-items: center;
   cursor: pointer;
   background-color: #000000;
-  float:right;
-  height: 30px;
+  float: right;
+  height: 30px
   width: 100px;
   /* margin:5px; */
   color: white;
   padding:2px 25px;
   /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);  */
 }
+
 
 #tarjeta {
   list-style-type: none;
@@ -345,6 +373,7 @@ option:hover {
   padding:2vw;
 }
 
+
 dd[itemprop="descriptionDetails"] {
   text-align: justify;
   display: flex;
@@ -361,6 +390,7 @@ dd[itemprop="descriptionDetails"] {
 
 /* Nombre de la ficha  */
 dd[itemprop="nameDetails"] {
+
   font-size: larger;
   font-weight: bold;
   margin-top:1vw;
@@ -370,8 +400,8 @@ dd[itemprop="nameDetails"] {
  /* imagen de la ficha  */
 #detailCard img {
   margin: 0 px;
-  padding: 0px;
-  height: 480px;
+  padding: 2px;
+  height: 470px;
   left: 0;
   float: left;
 
@@ -405,6 +435,119 @@ dd[itemprop="nameDetails"] {
   border: none;
   margin: 0;
 }
+
+
+/*descripcion larga*/
+dd[itemprop="descriptionDetails"] {
+  text-align: justify;
+  margin-top: 20px;
+  width: 45%;
+  margin-bottom: 20px;
+  display: flex;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/*dl id ContenedorDetails*/
+#ContenedorDetails {
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  position: relative;
+}
+
+/* #container{
+  display:none;
+  font-family: "JetBrains Mono";
+  margin-top:80px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: wrap;
+  /* width:200px; */
+ /* background-color: rgb(255, 255, 255);
+  margin: 5px;
+  padding:0;
+  
+} */
+#movementEstadistic{
+  display: none;
+  flex-direction: row;
+  margin-top:2%;
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  height: fit-content;
+}
+#stats{
+display:flex;
+flex-direction: column;  
+width:40%;
+height: 100%;
+}
+#graphs{
+width:60%;
+display: flex;
+flex-direction: column;
+height: 100%;
+}
+
+#cardEsta{
+  display: flex;  
+  flex-direction: column;
+  text-align: right;
+  margin:1%; 
+  background-color: rgb(255, 255, 255);
+  font-family: "JetBrains Mono";
+  flex-shrink: 0;
+  white-space: nowrap;;
+  
+}
+#graph{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  background-color: rgb(0, 0, 0);
+  right: 0;
+  width: fit-content; /*para que el contenedor se adecue al contenido*/
+  flex-shrink: 0;
+  margin:0.7%;
+}
+
+.dots{
+  color: black;
+  font-family: "JetBrains Mono";
+  background-size: contain;
+  /* font-size: 80%; */
+}
+@media screen and (max-width: 1000px) {
+  .show{
+    display: flex;
+    flex-direction: column;
+    width: 80%; 
+    max-height: 80%; 
+    top: 50%;
+    left: 50%;
+      }
+    #ContenedorDetails {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+    margin-top: 4.9%;
+    padding: 0;
+    padding-left: 0;
+    background-color: #F6F6EC;
+    border-color: #918d8d;
+    z-index: 1;
+  }
+  #cardEsta,#graph{
+    font-size: 60%;
+        
+  }
+}
+
+
 @media (max-width: 1010px) {
   dd[itemprop="descriptionDetails"] {
     text-align: justify;
@@ -431,6 +574,7 @@ dd[itemprop="nameDetails"] {
 #ContenedorDetails dd.contenedor3 {
   display:none;
 }
+
 }
 @media (max-width: 780px) {
   #tarjeta li {
@@ -476,6 +620,5 @@ dd[itemprop="nameDetails"] {
   object-fit: contain;
 }
 }
-
 
 

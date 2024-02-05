@@ -4,7 +4,7 @@ import { test, expect } from '@playwright/test';
 test.describe('Pagina interraciones', () => {
 
   const sortOptions = { asc: 'asc', desc: 'desc'};
-  const liSelector = '#root > ul > li';
+  const liSelector = '#root > dt > dl';
 
   const getItempropValues = async (page, property) => {
     const liElements = await page.$$(liSelector);

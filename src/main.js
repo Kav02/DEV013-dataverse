@@ -54,12 +54,12 @@ document
   .querySelector("#artist-filter")
   .addEventListener("change", function (event) {
     const artistDisplay = event.target.value;
-    document.getElementById("artmovement-filter").value = "Corrientes";
-    document.getElementById("alphabetical-order").value = "Ordenar";
+    document.querySelector("artmovement-filter").value = "Corrientes";
+    document.querySelector("alphabetical-order").value = "Ordenar";
     const artistCards = filterData(data, "artistName", artistDisplay);
     currentData = [...artistCards];
     const filteredCards = renderItems(artistCards);
-    const clearScreen = document.getElementById("root");
+    const clearScreen = document.querySelector("root");
     clearScreen.innerHTML = "";
     clearScreen.appendChild(filteredCards);
   });
@@ -104,48 +104,40 @@ document
 //ESTADISTICA
 const dataEstadistic = computeStats(data);
 const selectEstadistic = document.getElementById("movementEstadistic");
-document
-  .querySelector("#button-stats")
-  .addEventListener("click", function () {
-    if (selectEstadistic.style.display === "block") {
-      selectEstadistic.style.display = "none";
-      selectEstadistic.innerHTML = "";
-    } else {
-      selectEstadistic.style.display = "block";
-
+document.querySelector("#button-stats").addEventListener("click", function () {
+  if (selectEstadistic.style.display === "flex") {
+    selectEstadistic.style.display = "none";
+    // selectEstadistic.innerHTML = "";
+  } else {
+    selectEstadistic.style.display = "flex";
+    const stats = document.getElementById("stats");
+    const graphs = document.getElementById("graphs");
+    if (stats.childElementCount === 0) {
       Object.entries(dataEstadistic).forEach(([key, value]) => {
-        const container = document.createElement("div");
-        container.id = "container";
-        // const cardEsta = document.createElement("div");
-        // cardEsta.id = "cardEsta";
-        // const graph = document.createElement("div");
-        // graph.id = "graph";
-        container.innerHTML = `<div id="cardEsta">${key}:${value} % </div><div id="graph">${graphIcon(value)}</div>`;
+        const cardEsta = document.createElement("div");
+        cardEsta.id = "cardEsta";
+        cardEsta.innerHTML = `${key}: ${value} %`;
 
-        selectEstadistic.appendChild(container);
-        
+        const graph = document.createElement("div");
+        graph.id = "graph";
+        graph.innerHTML = graphIcon(value);
 
-        //revisar la consola antes de terminar(se crea una lista por cada objeto)
+        stats.appendChild(cardEsta);
+        graphs.appendChild(graph);
       });
     }
-  });
+  }
+});
 
 function graphIcon(count) {
   let icon = "";
   for (let i = 0; i < count; i++) {
-    icon += "<span style='color: black; font-size: 35px;'>■</span>";
-
+    icon += `<span class = "dots">■</span>`;
   }
   return icon;
 }
-const iconContainer = document.getElementById("iconContainer");
-iconContainer.innerHTML = graphIcon();
-
-// const StatsChart = dataEstadistic.map((moveEstadistic)=>`<li>${moveEstadistic}</li>`);
-// const windowEstadistic=document.querySelector("#movementEstadistic");
-// windowEstadistic.innerHTML=`<li> ${StatsChart.join("")}`;
-
-// console.log(computeStats(data));
+// const iconContainer = document.getElementById("iconContainer");
+// iconContainer.innerHTML = graphIcon();
 
 /*No se está usando
 const artName = [];
@@ -162,4 +154,4 @@ for (const list of data) {
   artMovement.push(artworkMovement);
   artMovement.sort();
 }
-*/
+console.log(artMovement);*/

@@ -14,7 +14,6 @@ Crear un desplegable recorriendo la información del artdata buscando los artist
   return paintingsperFilter;
 };
 
-
 //data, filterBy, value
 //Crear filtro por artista en main
 
@@ -24,6 +23,7 @@ Crear un desplegable recorriendo la información del artdata buscando los artist
 //  2-Al dar click en el botón limpiar regresa a "home"
 //  3- Ordenar (desarrollar aparte)
 //Crear orden
+
 
 
 export const sortData = (data, sortBy, sortOrder) => {
@@ -37,7 +37,7 @@ export const sortData = (data, sortBy, sortOrder) => {
     sortOrder === "desc";
     sortedCard.sort((a, b) => b.name.localeCompare(a.name));
   }
-  console.log(sortedCard)
+  
   return sortedCard;
   
 };
@@ -52,7 +52,7 @@ export const computeStats = (data) => {
   {});
   const percentage = {};
   for (const Move in Estadistic) {
-    percentage[Move] = ((Estadistic[Move] / movementTotal) * 100);
+    percentage[Move] = Number((Estadistic[Move] / movementTotal) * 100);
   }
   return percentage;
 };
