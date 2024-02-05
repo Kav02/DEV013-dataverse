@@ -7,7 +7,7 @@ export const renderItems = (data) => {
 
     /* ` se utiliza para delimitar las plantillas de cadena, y ${}` se utiliza para insertar expresiones en esas plantillas de cadena.
     dt: description term y dd: description details. El dt está vacio porque no queremos mostrar el nombre de la caracteristica solo el dato*/
-    listItem.innerHTML = `<dl id="ContenedorTarjeta">
+    listItem.innerHTML = `<dl id="cardContainer">
     <dt><img itemprop="image" src="${painting.imageUrl}" alt="${painting.name}"></dd>
           <dt class="contenedor1"></dt><dd itemprop="name">${painting.name}</dd>
           <dt class="contenedor1"></dt><dd itemprop="artistName">${painting.facts.artistName}</dd>
@@ -45,6 +45,7 @@ export const renderCards = (data) => {
   longCard.setAttribute("itemscope", "");
   data.forEach((painting) => {
     const listCard = document.createElement("li");
+    listCard.setAttribute('itemscope', '');
     listCard.setAttribute("itemtype", "");
     listCard.innerHTML = `<dl id="ContenedorDetails">
     <dt><img itemprop="imageDetails" src="${painting.imageUrl}" alt="${painting.name}"></dd>

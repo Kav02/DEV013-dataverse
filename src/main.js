@@ -54,12 +54,12 @@ document
   .querySelector("#artist-filter")
   .addEventListener("change", function (event) {
     const artistDisplay = event.target.value;
-    document.getElementById("artmovement-filter").value = "Corrientes";
-    document.getElementById("alphabetical-order").value = "Ordenar";
+    document.querySelector("artmovement-filter").value = "Corrientes";
+    document.querySelector("alphabetical-order").value = "Ordenar";
     const artistCards = filterData(data, "artistName", artistDisplay);
     currentData = [...artistCards];
     const filteredCards = renderItems(artistCards);
-    const clearScreen = document.getElementById("root");
+    const clearScreen = document.querySelector("root");
     clearScreen.innerHTML = "";
     clearScreen.appendChild(filteredCards);
   });

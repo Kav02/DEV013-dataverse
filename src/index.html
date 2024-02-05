@@ -26,6 +26,7 @@
                   <label for="artmovement-filter">Corrientes</label>
           <select data-testid="select-filter" id="artmovement-filter" name="artmovement-filter">
           </select>
+          <label for ="alphabetical-order">Ordenar</label>
           <select data-testid="select-sort" id="alphabetical-order" name="alphabetical-order">
             <option value="Ordenar" disabled selected>Ordenar</option>
             <option value="asc">A - Z</option>
@@ -48,7 +49,11 @@
       <div id = "stats"></div>
       <div id = "graphs"></div>
     </section>
-    <section id="root"></section>
+    <section id="root">
+      <!-- <ul id = "artCard" itemscope itemtype="https://schema.org/VisualArtwork">
+      <li id = "cardContainer" itemscope itemtype="https://schema.org/VisualArtwork"></li>
+  </ul>  -->
+  </section>
     <section id="detailCard"></section>
     <!-- <section class="chart" id="statsCard">
       <ul class= "bars"></ul> -->
@@ -61,41 +66,4 @@
 
   </body>
 </html>
-
-
-<!--No se está usando
-
-        <nav>
-          <ul class="nav">
-            <li>
-              <a href="#">Ordenar por</a>
-              <ul>
-                <li>
-                  <a class="opciones" href="#">Año</a>
-                  <ul>
-                    <li><a href="#">1900's</a></li>
-                    <li><a href="#">1800's</a></li>
-                    <li><a href="#">Año</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a class="opciones" href="#">Alfabeticamente</a>
-                  <ul>
-                    <li><a href="#">A-Z</a></li>
-                    <li><a href="#">Z-A</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-
-        <button data-testid="button-clear">Limpiar</button>
-      </article>
-    </div>
-
-    <section id="root"></section>
-    <section id="detailCard">
-       <button id="close-button"> Cerrar </button> -->
-  
 
