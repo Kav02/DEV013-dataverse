@@ -6,10 +6,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   }
-main{
-  display:flex;
-  flex-direction: column;
-}
+
 h1 {
   /*ART PLACE*/
   font-family: "Ubuntu";
@@ -41,6 +38,8 @@ h1 {
   height: 60px;
 }
 
+
+
 /* #banner img {
    width: 100%;
    object-fit:cover;
@@ -56,10 +55,7 @@ h2 {
     text-align: center;
     position: absolute;
     margin-top: 14px;
-  
-  }
-
-
+    }
 article {
   /*Filtros */
   background-color: rgba(255, 255, 255, 0.7);
@@ -74,7 +70,6 @@ article {
   height: auto;
   border-bottom-style: double;
   border-width: 1px;
-
   }
 .select-menu,
 .buttons{
@@ -124,15 +119,22 @@ article {
 }
 
 #button-clear {
-  font-family: "JetBrains Mono";
-  font-size: 14px;
-  color: white;
-  background-color: black;
-  border-radius: 15px;
-  padding: 2px 30px;
-  
+    font-family: "JetBrains Mono";
+    color:white;
+    background-color: #000000;
+    border-radius: 20px;
+    border-color: #F8F8F1;
+    padding: 2px 5px;
+    position: absolute;
+    left: 85%;
+    height:30px;
+    width: 100px;
+    box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.63);
+}
+#button-clear:hover{
+  background-color:#706e6e;
+    transition: 0.3s;
   }
-
 #button-stats {
   color: rgb(0, 0, 0);
   background-color: #929191;
@@ -170,10 +172,14 @@ article {
   margin-top: 50px;
   margin-bottom: 20px;
 }
-
+/*PRUEBA:para que aparezca solo una columna en cel*/
+/* @media (max-width: 200px) {
+   section {
+     columns: 1;
+   }
+ } */
 
 #cardContainer {
- {
   /*tarjetas independientes*/
   background-color: #F8F8F1;
   max-width: 100%;
@@ -228,6 +234,7 @@ dd[itemprop="name"] {
 footer {
   font-family: "JetBrains Mono";
   width: 100%;
+  padding: 10px;
   font-size: 15px;
   text-align: right;
   border-top: 2px solid black;
@@ -291,7 +298,7 @@ option:hover {
   position: fixed;
   top: 50%;
   left: 50%;
-
+  
   /* height:80%; */
   /* padding-bottom: 15vw; */
   transform: translate(-50%, -50%);
@@ -318,7 +325,7 @@ option:hover {
   cursor: pointer;
   background-color: #000000;
   float: right;
-  height: 30px
+  height: 30px;
   width: 100px;
   /* margin:5px; */
   color: white;

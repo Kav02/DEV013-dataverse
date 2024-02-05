@@ -54,7 +54,7 @@ document
   .querySelector("#artist-filter")
   .addEventListener("change", function (event) {
     const artistDisplay = event.target.value;
-    document.querySelector("artmovement-filter").value = "Corrientes";
+    document.getElementById("artmovement-filter").value = "Corrientes";
     document.querySelector("alphabetical-order").value = "Ordenar";
     const artistCards = filterData(data, "artistName", artistDisplay);
     currentData = [...artistCards];
