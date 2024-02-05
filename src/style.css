@@ -139,13 +139,6 @@ article {
   margin-bottom: 20px;
 }
 
-/*PRUEBA:para que aparezca solo una columna en cel*/
-/* @media (max-width: 200px) {
-   section {
-     columns: 1;
-   }
- } */
-
 #ContenedorTarjeta {
   /*tarjetas independientes*/
   background-color: #F8F8F1;
@@ -200,7 +193,7 @@ dd[itemprop="name"] {
 
 footer {
   font-family: "JetBrains Mono";
-  width: 100%;
+  /* width: 100%; */
   padding: 10px;
   font-size: 15px;
   text-align: right;
@@ -247,17 +240,41 @@ select option {
 option:hover {
   background-color: #918d8d;
 }
-
+#movementEstadistic{
+  margin-top:40px;
+  background-color: rgb(255, 255, 255);
+}
+#cardEsta{
+  margin:20px;
+  background-color: rgb(255, 255, 255);
+  font-family: "JetBrains Mono";
+  font-size:16px;
+  width:40%;
+  text-align: right;
+  align-items: center;
+}
+#graph{
+  margin:20px;
+  background-color: rgb(0, 0, 0);
+  height: 36px;
+  right: 0;
+  width:60%;
+  width: fit-content; /*para que el contenedor se adecue al contenido*/
+}
+/*PRUEBA*/
 .show {
   position: fixed;
   top: 50%;
   left: 50%;
-  height:71.5%;
+  /* height:80%; */
+  /* padding-bottom: 15vw; */
   transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
+  background-color: rgb(212, 4, 4);
+  padding-bottom: 15px;
   border: none;
   z-index: 999;
+  margin-top: 7vh;
+  width: 100%; 
  
 }
 
@@ -276,39 +293,81 @@ option:hover {
   float:right;
   height: 30px;
   width: 100px;
-  margin:5px;
+  /* margin:5px; */
   color: white;
   padding:2px 25px;
   /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);  */
 }
-/*FICHA DETALLADA*/
-#detailCard {
+
+#tarjeta {
+  list-style-type: none;
+  background-color: aqua;
+  padding: 0;
+  margin: 0;
+}
+
+#tarjeta li {
+  display: flex; /* Utiliza flexbox para la disposición horizontal */
+  background-color: blueviolet;
+  padding-top: 4px;
+  margin: 0;
+}
+
+#ContenedorDetails {
   display: flex;
   width: 100%;
-  /* height: 72%; */
-  margin-top: 5%;
-  padding: 0;
-  padding-left: 0;
-  background-color: #F6F6EC;
-  overflow: hidden;
-  border-color: #737070;
-  z-index: 1;
-  /*para que la tarjeta salga por encima de lo demas*/
+  background-color:cadetblue;
+  margin: 0px;
+  padding-bottom: 0px;
+  padding-top:4px; /*quitar luego*/
+}
+
+#imagenDetails {
+  width: auto; /* Ancho máximo de la imagen */
+  background-color: chocolate;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 
 }
 
-/* Nombre de la ficha */
+#imagenDetails img {
+  max-height:400px;
+   /* Ajusta el tamaño de la imagen al 100% del ancho del contenedor */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+
+#textDetails {
+  display: flex; /* Utiliza flexbox para la disposición horizontal */
+  flex-direction: column; /* Alinea los elementos verticalmente en el contenedor */
+  flex-grow: 1; /* El texto ocupa el espacio restante en la tarjeta */
+  background-color: #949292;
+  padding:2vw;
+}
+
+dd[itemprop="descriptionDetails"] {
+  text-align: justify;
+  display: flex;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  /* font-size: 12.5px; */
+  margin-top:2vw;
+  margin-bottom:2vw;
+  font-size: 1.7vh;
+  
+}
+
+
+
+/* Nombre de la ficha  */
 dd[itemprop="nameDetails"] {
-  font-size: xx-large;
+  font-size: larger;
   font-weight: bold;
-  /*negrita*/
-  right: 80%;
-  margin-bottom: 20px;
-
-  /* margin-top: 3%; */
+  margin-top:1vw;
+  margin-bottom: 1vw;
 }
 
-/* imagen de la ficha */
+ /* imagen de la ficha  */
 #detailCard img {
   margin: 0 px;
   padding: 0px;
@@ -318,12 +377,12 @@ dd[itemprop="nameDetails"] {
 
 }
 
-/* el cudrado pequeño 1*/
+/* el cudrado pequeño 1 */
 #ContenedorDetails dd.contenedor2 {
-  width: 300px;
+  width: 220px;
   background-color: rgb(0, 0, 0);
   color: white;
-  font-size: medium;
+  font-size: 13px;
   display: inline-block;
   margin: 0;
   padding: 5px;
@@ -331,207 +390,92 @@ dd[itemprop="nameDetails"] {
   display: flex;
   flex-direction: column;
   border: none;
+
 }
 
-/* el cudrado pequeño 2*/
+ /* el cudrado pequeño 2 */
 #ContenedorDetails dd.contenedor3 {
-  width: 300px;
+  width: 220px;
   background-color: rgb(0, 0, 0);
   margin-top: 0px;
   color: white;
-  font-size: medium;
   display: inline-block;
   padding: 5px;
-  /* display: flex;
-  flex-direction: column; */
+  font-size: 13px;
   border: none;
   margin: 0;
 }
-
-/*descripcion larga*/
-dd[itemprop="descriptionDetails"] {
-  text-align: justify;
-  margin-top: 20px;
-  width: 45%;
-  margin-bottom: 20px;
-  display: flex;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+@media (max-width: 1010px) {
+  dd[itemprop="descriptionDetails"] {
+    text-align: justify;
+    display: flex;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    /* font-size: 12.5px; */
+    margin-top:2vw;
+    margin-bottom:2vw;
+    font-size: 1.5vh;
+    padding-right:4vw;
+  } 
+  /* imagen de la ficha  */
+#detailCard img {
+  margin: 0 px;
+  padding: 0px;
+  max-width: 500px;
+  left: 0;
+  float: left;
 }
-
-/*dl id ContenedorDetails*/
-#ContenedorDetails {
-  height: 470px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin: 0;
-  position: relative;
 }
-#container{
+@media (max-width: 870px) {
+   /* el cudrado pequeño 2 */
+#ContenedorDetails dd.contenedor3 {
   display:none;
-  font-family: "JetBrains Mono";
-  margin-top:80px;
-  font-weight: bold;
-  display: flex;
-  flex-direction: wrap;
-  /* width:200px; */
-  background-color: rgb(255, 255, 255);
-  margin: 5px;
-  padding:0;
-  
 }
-#movementEstadistic{
-  margin-top:40px;
-  background-color: rgb(255, 255, 255);
 }
-#cardEsta{
-  margin:20px;
-  background-color: rgb(255, 255, 255);
-  font-family: "JetBrains Mono";
-  font-size:16px;
-  width:40%;
-  text-align: right;
-  align-items: center;
-  
+@media (max-width: 780px) {
+  #tarjeta li {
+    display: flex; /* Utiliza flexbox para la disposición horizontal */
+    flex-direction: column; /* Alinea los elementos en columna */
+    margin-bottom: 20px; /* Espaciado entre tarjetas */
+    width: 100%; /* Ancho del 100% dentro de la tarjeta */
+  }
 
-}
-#graph{
-  margin:20px;
-  background-color: rgb(0, 0, 0);
-  height: 36px;
-  right: 0;
-  width:60%;
-  width: fit-content; /*para que el contenedor se adecue al contenido*/
+  #ContenedorDetails {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    width: 100%;
+  }
+  #imagenDetails {
+    width: auto;
+    background-color: chocolate;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /* el cudrado pequeño 1 */
+#ContenedorDetails dd.contenedor2 {
+  display:none;
 }
 
-
-
-
-/*ORDENAR POR*/
-/* ul {
-  list-style: none;
-  margin-top: -1px;
-  font-family: "JetBrains Mono";
-  font-size: 15px;
-
+ /* el cudrado pequeño 2 */
+#ContenedorDetails dd.contenedor3 {
+  display:none;
 }
-
-.nav li a {
-  width: 150px;
-  text-decoration: none;
-  padding: 7px;
-  padding-right: 10px;
-  padding-left: 10px;
-  display: block;
-  color: black;
-  margin-top: 1px;
-  margin-left: -40px;
 }
-
-.nav li a:hover {
-  background-color: #918d8d;
-
-}
-
-a.opciones {
-  background-color: #D9D9D9;
-}
-
-.nav>li {
+@media (max-width: 450px) {
+/* imagen de la ficha  */
+#detailCard img {
+  margin: 0 px;
+  padding: 0px;
+  /* max-width:100vw; */
+  left: 0;
   float: left;
+  max-width: 100%; /* Ajusta el tamaño de la imagen al 100% del ancho del contenedor */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+  object-fit: contain;
+}
 }
 
-.nav li ul {
-  display: none;
-  position: absolute;
-  min-width: 140px;
-  left: 323px;
 
-}
-
-.nav li:hover>ul {
-  display: block;
-  background-color: #D9D9D9;
-  ;
-}
-
-.nav li ul li {
-  position: relative;
-  margin-top: 0px;
-  background-color: #D9D9D9;
-}
-
-.nav li ul li ul {
-  left: 130px;
-  top: 0px;
-  margin-top: -1px;
-
-  background-color: #D9D9D9;
-
-
-} */
-=======
-/* ORDENAR POR
-ul {
-  list-style: none;
-  margin-top: -1px;
-  font-family: "JetBrains Mono";
-  font-size: 15px;
-
-}
-
-.nav li a {
-  width: 150px;
-  text-decoration: none;
-  padding: 7px;
-  padding-right: 10px;
-  padding-left: 10px;
-  display: block;
-  color: black;
-  margin-top: 1px;
-  margin-left: -40px;
-}
-
-.nav li a:hover {
-  background-color: #918d8d;
-
-}
-
-a.opciones {
-  background-color: #D9D9D9;
-}
-
-.nav>li {
-  float: left;
-}
-
-.nav li ul {
-  display: none;
-  position: absolute;
-  min-width: 140px;
-  left: 323px;
-
-}
-
-.nav li:hover>ul {
-  display: block;
-  background-color: #D9D9D9;
-  ;
-}
-
-.nav li ul li {
-  position: relative;
-  margin-top: 0px;
-  background-color: #D9D9D9;
-}
-
-.nav li ul li ul {
-  left: 130px;
-  top: 0px;
-  margin-top: -1px;
-
-  background-color: #D9D9D9;
-
-} */
 
