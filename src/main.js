@@ -70,6 +70,7 @@ movementSelect.addEventListener("change", function () {
   document.getElementById("alphabetical-order").value = "Ordenar";
   const selectedArtMovement = movementSelect.value; // Filtrar y mostrar las tarjetas correspondientes
   const filterMovement = filterData(data, "artMovement", selectedArtMovement);
+  currentData = [...filterMovement];
   const filteredCards = renderItems(filterMovement);
   const rootfilterMovement = document.getElementById("root");
   rootfilterMovement.innerHTML = ""; // .innerHTML = "" :se limpia el contenedor antes de agregar nuevas tarjetas

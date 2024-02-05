@@ -1,6 +1,5 @@
-import { data as fakeData } from './data.js';
-import {sortData,filterData,computeStats} from '../src/dataFunctions.js';
-
+import { sortData, filterData, computeStats } from "../src/dataFunctions.js";
+import { data as fakeData } from "./data.js";
 
 describe("sortData", () => {
   it("should sort data in ascending order", () => {

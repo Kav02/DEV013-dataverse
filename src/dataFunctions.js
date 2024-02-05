@@ -50,13 +50,10 @@ export const computeStats = (data) => {
     return acumulador;
   },
   {});
-  console.log(Estadistic);
-
   const percentage = {};
   for (const Move in Estadistic) {
     percentage[Move] = ((Estadistic[Move] / movementTotal) * 100);
   }
-  console.log(percentage)
   return percentage;
 };
 

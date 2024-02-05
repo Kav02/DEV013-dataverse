@@ -202,7 +202,7 @@ footer {
 
 
 
-/*fILTRAR POR*/
+/*FILTRAR POR*/
 select {
   height: 34px;
   width: 100%;
@@ -234,9 +234,7 @@ option {
 
 select option {
   height: 30px;
-  /* Puedes ajustar la altura según tus preferencias */
   padding: 5px;
-  /* Puedes ajustar el relleno según tus preferencias */
 }
 
 option:hover {
@@ -441,7 +439,7 @@ dd[itemprop="nameDetails"] {
     margin-bottom: 20px; /* Espaciado entre tarjetas */
     width: 100%; /* Ancho del 100% dentro de la tarjeta */
   }
-  
+
   #ContenedorDetails {
     display: flex;
     flex-direction: column; /* Alinea los elementos en columna */
@@ -459,6 +457,7 @@ dd[itemprop="nameDetails"] {
 #ContenedorDetails dd.contenedor2 {
   display:none;
 }
+
  /* el cudrado pequeño 2 */
 #ContenedorDetails dd.contenedor3 {
   display:none;
