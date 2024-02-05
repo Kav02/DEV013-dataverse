@@ -6,6 +6,11 @@ body {
   margin: 0;
   box-sizing: border-box;
   }
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 
 h1 {
   /*ART PLACE*/
@@ -93,8 +98,8 @@ article {
   cursor: pointer;
   align-items: center;
   width: fit-content;
-  padding-left: 10vw;
-  padding-right: 2vw;
+  /* padding-left: 10vw; */
+  /* padding-right: 2vw; */
   
 }
  @media screen and (max-width: 950px) {
@@ -106,8 +111,8 @@ article {
     width: 100%; 
     order: 2; 
     margin-top: 10px;
-    align-items: center;
-    justify-content: center;
+    align-items: center; 
+    justify-content: center; 
   }
   #button-stats{
     margin-right: 15%;
@@ -124,8 +129,7 @@ article {
     background-color: #000000;
     border-radius: 20px;
     border-color: #F8F8F1;
-    padding: 2px 5px;
-    position: absolute;
+    
     left: 85%;
     height:30px;
     width: 100px;
@@ -234,7 +238,6 @@ dd[itemprop="name"] {
 footer {
   font-family: "JetBrains Mono";
   width: 100%;
-  padding: 10px;
   font-size: 15px;
   text-align: right;
   border-top: 2px solid black;
