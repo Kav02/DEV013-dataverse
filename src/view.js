@@ -21,7 +21,7 @@ export const renderItems = (data) => {
       const detailCard = document.getElementById("detailCard"); // Obtiene el elemento detailCard del html
       const closeButton = document.createElement("button");
       closeButton.id = "close-button";
-      closeButton.textContent = "Cerrar";
+      // closeButton.textContent = "Cerrar";
       longCard.appendChild(closeButton);
       detailCard.innerHTML = longCard.outerHTML;
       detailCard.classList.add("show");
