@@ -10,7 +10,7 @@
 * [6. Criterios de aceptación mínimos del proyecto](#6-criterios-de-aceptación-mínimos-del-proyecto)
 * [7. Hacker edition](#7-hacker-edition)
 * [8. Objetivos de aprendizaje](#8-objetivos-de-aprendizaje)
-  [9. Diseño](#9-diseño)
+*  [9. Diseño](#9-diseño)
 * [10. Proyecto Final](#10-proyecto-final)
 * [11. Pistas, tips y lecturas complementarias](#11-pistas-tips-y-lecturas-complementarias)
 * [12. Consideraciones para pedir tu Project Feedback](#12-consideraciones-para-pedir-tu-project-feedback)
@@ -844,8 +844,8 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 
 Antes de agendar tu Project Feedback con un coach, asegúrate que tu proyecto:
 
-* [ ] Cumple con todos los criterios mínimos de aceptación al ejecutar `npm run test:oas`
-* [ ] Cumple con todas las pruebas _end to end_ al ejecutar `npm run test:e2e`
+* [x] Cumple con todos los criterios mínimos de aceptación al ejecutar `npm run test:oas`
+* [x] Cumple con todas las pruebas _end to end_ al ejecutar `npm run test:e2e` *Al generarse las opciones desde javascript, no corre las pruebas*
 * [x] Cumple con todas las pruebas unitarias al ejecutar `npm run test` y
   que tienen una cobertura del 70% de _statements_ (_sentencias_),
   _functions_ (_funciones_), _lines_ (_líneas_), y _branches_

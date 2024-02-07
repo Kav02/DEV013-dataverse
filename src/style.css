@@ -221,7 +221,7 @@ select option {
 option:hover {
   background-color: #918d8d;
 }
-#movementEstadistic{
+#movementStats{
   display: none;
   flex-direction: column;
   justify-content: flex-start;
@@ -232,7 +232,7 @@ option:hover {
   height: fit-content;
   
 }
-#titulo{
+#title{
 flex:1;
 text-align: center;  
 width: 100%;  
@@ -256,7 +256,7 @@ font-weight: bold;
   flex-direction: column;
   height: 100%;
 }
-#cardEsta{
+#cardStats{
   display: flex;  
   flex-direction: column;
   text-align: right;
@@ -461,7 +461,7 @@ dd[itemprop="name"] {
   left: 0;
   float: left;
 }
-#cardEsta,#graph{
+#cardStats,#graph{
   font-size: 90%;     
 }
 .select-menu {
@@ -478,7 +478,7 @@ dd[itemprop="name"] {
 #button-stats{
   margin-right: 50%;
 }
-#titulo{
+#title{
  margin-top: 50px;
 }
    /* el cuadrado pequeño 2 */
