@@ -55,11 +55,11 @@ document
   .addEventListener("change", function (event) {
     const artistDisplay = event.target.value;
     document.getElementById("artmovement-filter").value = "Corrientes";
-    document.querySelector("alphabetical-order").value = "Ordenar";
+    document.querySelector("#alphabetical-order").value = "Ordenar";
     const artistCards = filterData(data, "artistName", artistDisplay);
     currentData = [...artistCards];
     const filteredCards = renderItems(artistCards);
-    const clearScreen = document.querySelector("root");
+    const clearScreen = document.querySelector("#root");
     clearScreen.innerHTML = "";
     clearScreen.appendChild(filteredCards);
   });
@@ -94,7 +94,7 @@ document
   .querySelector("#alphabetical-order")
   .addEventListener("change", function (event) {
     const sortOrder = event.target.value;
-    const sortItems = sortData(currentData, "Ordenar", sortOrder);
+    const sortItems = sortData(currentData,"name", sortOrder);
     const sortedCards = renderItems(sortItems);
     const rootSorted = document.getElementById("root");
     rootSorted.innerHTML = ""; // .innerHTML = "" :se limpia el contenedor antes de agregar nuevas tarjetas

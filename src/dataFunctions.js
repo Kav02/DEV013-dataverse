@@ -32,10 +32,10 @@ export const sortData = (data, sortBy, sortOrder) => {
     sortedCard.push(list);
   }
   if (sortOrder === "asc") {
-    sortedCard.sort((a, b) => a.name.localeCompare(b.name));
+    sortedCard.sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
   } else {
     sortOrder === "desc";
-    sortedCard.sort((a, b) => b.name.localeCompare(a.name));
+    sortedCard.sort((a, b) => b[sortBy].localeCompare(a[sortBy]));
   }
   
   return sortedCard;

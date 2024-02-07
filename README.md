@@ -10,8 +10,10 @@
 * [6. Criterios de aceptación mínimos del proyecto](#6-criterios-de-aceptación-mínimos-del-proyecto)
 * [7. Hacker edition](#7-hacker-edition)
 * [8. Objetivos de aprendizaje](#8-objetivos-de-aprendizaje)
-* [9. Pistas, tips y lecturas complementarias](#9-pistas-tips-y-lecturas-complementarias)
-* [10. Consideraciones para pedir tu Project Feedback](#10-consideraciones-para-pedir-tu-project-feedback)
+  [9. Diseño](#9-diseño)
+* [10. Proyecto Final](#10-proyecto-final)
+* [11. Pistas, tips y lecturas complementarias](#11-pistas-tips-y-lecturas-complementarias)
+* [12. Consideraciones para pedir tu Project Feedback](#12-consideraciones-para-pedir-tu-project-feedback)
 
 ***
 
@@ -724,7 +726,28 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Few shot prompting | Learn Prompting: Your Guide to Communicating with AI](https://learnprompting.org/es/docs/basics/few_shot)
 </p></details>
 
-## 9. Pistas, tips y lecturas complementarias
+## 9. Diseño
+Aunque experimentamos cambios a lo largo del proceso, desde el inicio teníamos una idea clara de la distribución de nuestra página web. A pesar de los ajustes, logramos mantener elementos clave de nuestro diseño inicial, lo que contribuyó a preservar la estructura y la esencia de nuestro proyecto.
+![alt text](image-9.png)
+
+Enfrentamos ciertas complicaciones al seleccionar una paleta de colores, dado que nuestras obras presentaban una amplia variedad cromática. Fue un desafío encontrar un color que se adaptara armoniosamente a todas las piezas. Como solución, optamos por una paleta de colores neutros, proporcionando una base equilibrada que complementa cada obra sin restarle protagonismo a sus colores individuales.
+![alt text](image-10.png)
+
+
+## 10. Proyecto Final
+
+Iniciamos nuestro proyecto con una investigación y la creación de prototipos,a medida que materializábamos nuestras ideas en la interfaz, enfrentamos múltiples desafíos y experimentamos cambios constantes. Realizamos ajustes significativos hasta lograr fusionar nuestras decisiones . El proyecto final que presentamos es el fruto de nuestro esfuerzo, creatividad y perseverancia en cada etapa del desarrollo.
+![alt text](image-6.png)
+
+Nuestra interfaz ofrece una visión detallada de las obras de arte presentadas, brindándote la oportunidad de explorar cada pieza en profundidad y apreciar sus detalles únicos.
+![alt text](image-7.png)
+
+**RESPONSIVE**
+Este proyecto web tiene un diseño responsivo que brinda una experiencia de usuario fluida en dispositivos móviles y computadoras, en la cual aun podemos ver mas detalles de las obras de arte, sinembargo el diseño cambia para que la información mostrada se pueda ver con facilidad. 
+
+![alt text](image-8.png)
+
+## 11. Pistas, tips y lecturas complementarias
 
 ### Primeros pasos
 
@@ -812,7 +835,7 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
   Aceptación_ y nosotros sí lo haremos. Más detalles en la guía.
 * [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
 
-## 10. Consideraciones para pedir tu Project Feedback
+## 12. Consideraciones para pedir tu Project Feedback
 
 Antes de agendar tu Project Feedback con un coach, asegúrate que tu proyecto:
 
@@ -842,3 +865,5 @@ _life skills_ desde tu dashboard de estudiante.
 
 Si no has completado todo lo anterior, no consideramos que estás lista para
 tu sesión de Project Feedback.
+
+
