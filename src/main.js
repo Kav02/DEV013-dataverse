@@ -44,7 +44,7 @@ for (const artwork of data) {
 const movementOptions = movementList.map(
   (move) => `<option value="${move}">${move}</option>`
 );
-const movementSelect = document.getElementById("artmovement-filter");
+const movementSelect = document.querySelector("#artmovement-filter");
 movementSelect.innerHTML = `<option disabled selected>Corrientes</option>
 ${movementOptions.join("")}`;
 
@@ -54,9 +54,9 @@ document
   .querySelector("#artist-filter")
   .addEventListener("change", function (event) {
     const artistDisplay = event.target.value;
-    document.getElementById("artmovement-filter").value = "Corrientes";
+    document.querySelector("#artmovement-filter").value = "Corrientes";
     document.querySelector("#alphabetical-order").value = "Ordenar";
-    const artistCards = filterData(data, "artistName", artistDisplay);
+    const artistCards = filterData(currentData, "artistName", artistDisplay);
     currentData = [...artistCards];
     const filteredCards = renderItems(artistCards);
     const clearScreen = document.querySelector("#root");
@@ -66,8 +66,8 @@ document
 //Por movimiento
 movementSelect.addEventListener("change", function () {
   //change:se dispara cuando hay una alteración para <select> al valor de un elemento es confirmada por el usuario.
-  document.getElementById("artist-filter").value = "Artistas"; //Resetear filtro artistas
-  document.getElementById("alphabetical-order").value = "Ordenar";
+  document.querySelector("#artist-filter").value = "Artistas"; //Resetear filtro artistas
+  document.querySelector("#alphabetical-order").value = "Ordenar";
   const selectedArtMovement = movementSelect.value; // Filtrar y mostrar las tarjetas correspondientes
   const filterMovement = filterData(data, "artMovement", selectedArtMovement);
   currentData = [...filterMovement];
@@ -82,9 +82,9 @@ function clear_filters() {
   const clearScreen = document.getElementById("root");
   clearScreen.innerHTML = "";
   clearScreen.appendChild(shortCards);
-  document.getElementById("artist-filter").value = "Artistas";
-  document.getElementById("artmovement-filter").value = "Corrientes";
-  document.getElementById("alphabetical-order").value = "Ordenar";
+  document.querySelector("#artist-filter").value = "Artistas";
+  document.querySelector("#artmovement-filter").value = "Corrientes";
+  document.querySelector("#alphabetical-order").value = "Ordenar";
 }
 const buttonClear = document.querySelector('[data-testid="button-clear"]');
 buttonClear.addEventListener("click", clear_filters);
@@ -103,7 +103,7 @@ document
 
 //ESTADISTICA
 const dataEstadistic = computeStats(data);
-const selectEstadistic = document.getElementById("movementEstadistic");
+const selectEstadistic = document.querySelector("#movementEstadistic");
 document.querySelector("#button-stats").addEventListener("click", function () {
   if (selectEstadistic.style.display === "flex") {
     selectEstadistic.style.display = "none";
@@ -117,11 +117,9 @@ document.querySelector("#button-stats").addEventListener("click", function () {
         const cardEsta = document.createElement("div");
         cardEsta.id = "cardEsta";
         cardEsta.innerHTML = `${key}: ${value} %`;
-
         const graph = document.createElement("div");
         graph.id = "graph";
         graph.innerHTML = graphIcon(value);
-
         stats.appendChild(cardEsta);
         graphs.appendChild(graph);
       });
@@ -136,6 +134,22 @@ function graphIcon(count) {
   }
   return icon;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const iconContainer = document.getElementById("iconContainer");
 // iconContainer.innerHTML = graphIcon();
 

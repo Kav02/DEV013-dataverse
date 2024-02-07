@@ -337,8 +337,8 @@ npm run test:oas // Esto es para correr todos los tests de OAs
   - [x] Tiene un `<header>` con `<h1>`
   - [x] Tiene un `<footer>`
   - [x] Tiene un `<main>` con `<h2>`
-  - [] Todas las etiquetas de controles (inputs, selects, radio, etc) tienen `<label>`
-  - [] `<ul>` esta usado para dibujar la data
+  - [x] Todas las etiquetas de controles (inputs, selects, radio, etc) tienen `<label>`
+  - [x] `<ul>` esta usado para dibujar la data
   - [x] Los hijos de `<li>` usan attributos de microdata `itemscope` e `itemprop`
 
 #### CSS
@@ -439,10 +439,10 @@ Los usuarios quieren una página donde puedan consultar obras de arte cómodamen
 
 Se crearon las historias de usuario para ir trabajando por sprint. Ejemplo de la primer historia de usuario:
 Historia de Usuario
-**Como** (descripcion del usuario) persona interesada en el arte
-**Quiero** (Funcionalidad)__ poder ver obras de arte a modo de tarjetas
-**Para** (beneficio): __Explorarlas fácilmente
-**Criterios de aceptación**
+* **Como** (descripcion del usuario) persona interesada en el arte
+* **Quiero** (Funcionalidad)__ poder ver obras de arte a modo de tarjetas
+* **Para** (beneficio): __Explorarlas fácilmente
+* **Criterios de aceptación**
 • Las tarjetas deben mostrar una imagen de la obra de arte, el título de la obra, el nombre del artista
 • Las tarjetas deben ser de tamaño uniforme y estar dispuestas en una cuadrícula.
 Aceptación: Definition of done
@@ -499,7 +499,12 @@ https://www.figma.com/file/ZNw3k3LMWIG5G5F0D1e31R/Data-verse?type=design&node-id
 
 #### Testeos de usabilidad
 
-A través del desarrollo del proyecto, encontramos que el diseño inicial no era agradable a la vista por la combinación de las imágenes de las obras de arte y la mezcla de color. Se cambió el diseño a colores neutros y sobrios. 
+A través del desarrollo del proyecto, encontramos los siguientes problemas de usabilidad:
+* El diseño inicial no era agradable a la vista por la combinación de las imágenes de las obras de arte y la mezcla de color. Se cambió el diseño a colores neutros y sobrios.
+* El botón de cerrar la tarjeta detallada se cambió para los móviles para que fuera mas amigable al usuario
+* Se hicieron pruebas con tamaños de letra.
+* Se modificó la forma que se muestra la estadística y la tarjeta detallada en la versión móvil.
+  
 
 #### Implementación de la Interfaz de Usuaria (HTML/CSS/JS)
 
@@ -681,7 +686,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 - [x] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
 
-- [ ] **GitHub: Despliegue con GitHub Pages**
+- [x] **GitHub: Despliegue con GitHub Pages**
 
   <details><summary>Links</summary><p>
 
@@ -841,24 +846,26 @@ Antes de agendar tu Project Feedback con un coach, asegúrate que tu proyecto:
 
 * [ ] Cumple con todos los criterios mínimos de aceptación al ejecutar `npm run test:oas`
 * [ ] Cumple con todas las pruebas _end to end_ al ejecutar `npm run test:e2e`
-* [ ] Cumple con todas las pruebas unitarias al ejecutar `npm run test` y
+* [x] Cumple con todas las pruebas unitarias al ejecutar `npm run test` y
   que tienen una cobertura del 70% de _statements_ (_sentencias_),
   _functions_ (_funciones_), _lines_ (_líneas_), y _branches_
-* [ ] Esta libre de _errores_ de `eslint` al ejecutar `npm run pretest`
-* [ ] Está subido a GitHub y desplegado en GitHub Pages
-* [ ] Captura de pantalla del prompt utilizado para generar los datos.
+  ![alt text](image-11.png)
+* [x] Esta libre de _errores_ de `eslint` al ejecutar `npm run pretest`
+![alt text](image-12.png)
+* [x] Está subido a GitHub y desplegado en GitHub Pages
+* [x] Captura de pantalla del prompt utilizado para generar los datos.
 * Tiene un `README.md` con la siguente:
-  - [ ] _Definición del producto_ clara e informativa
-  - [ ] Historias de usuario
-  - [ ] Un _Diseño de la Interfaz de Usuaria_ (prototipo de alta fidelidad)
-  - [ ] El listado de problemas que detectaste a través de tests
+  - [x] _Definición del producto_ clara e informativa
+  - [x] Historias de usuario
+  - [x] Un _Diseño de la Interfaz de Usuaria_ (prototipo de alta fidelidad)
+  - [x] El listado de problemas que detectaste a través de tests
     de usabilidad en el `README.md`
 * Tiene un UI que cumple las funcionalidades:
-  - [ ] Muestra lista con datos y/o indicadores
-  - [ ] Permite ordenar data por uno o más campos (asc y desc)
-  - [ ] Permite filtrar data con base en una condición
-  - [ ] Permite limpiar los filtros con un botón
-  - [ ] Es _responsive_
+  - [x] Muestra lista con datos y/o indicadores
+  - [x] Permite ordenar data por uno o más campos (asc y desc)
+  - [x] Permite filtrar data con base en una condición
+  - [x] Permite limpiar los filtros con un botón
+  - [x] Es _responsive_
 
 Recuerda que debes hacer una autoevaluación de _objetivos de aprendizaje_ y
 _life skills_ desde tu dashboard de estudiante.
