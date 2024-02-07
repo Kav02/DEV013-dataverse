@@ -388,7 +388,7 @@ dd[itemprop="nameDetails"] {
 
  /* imagen de la ficha  */
 #detailCard img {
-  margin: 0 px;
+  margin-left: 20px;
   padding: 0px;
   height: 480px;
   left: 0;
