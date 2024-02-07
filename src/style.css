@@ -2,16 +2,15 @@
  "Sometype Mono":Titulo de los cuadros
  "JetBrains Mono":inf de las tarjetas,descipcion larga,cuadraditos,limpiar,galeria
  "Ubuntu": art place,todo lo demas */
- body {
+body {
   margin: 0;
   box-sizing: border-box;
-  /*propiedad de prueba en menus*/
-}
+  font-size: 100%;
+  }
 main{
   display:flex;
   flex-direction: column;
 }
-
 h1 {
   /*ART PLACE*/
   font-family: "Ubuntu";
@@ -33,7 +32,6 @@ h1 {
 #banner {
   /*galeria,filtros,img*/
   background-image: url("./Imagenes/imagen\ fondo.jpg");
-
   background-size: cover;
   /*para que la imagen se acome al contenedor*/
   width: 100%;
@@ -58,7 +56,8 @@ h2 {
   position: absolute;
   margin-top: 14px;
 
-}
+    }
+
 
 article {
   /*Filtros */
@@ -68,52 +67,51 @@ article {
   margin-top: 76px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   position: absolute;
-  align-items:flex-start;
-  /*se alinea verticalmente*/
+  align-items:flex-start;  /*se alinea verticalmente*/
   height:auto;
   border-bottom-style: double;
   border-width: 1px;
-  flex-wrap: wrap;
+  }
 
-}
-.select-menu,
-.buttons{
-  flex: 1;
-}
-.select-menu{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  min-width: 150px;
-  width: fit-content;
-  
-}
-.buttons {
-  display: flex;
-  justify-content:space-between ;
-  height: 34px;
-  width: 100%;
-  font-size: 15px;
-  text-align: center;
-  cursor: pointer;
-  align-items: center;
-  width: fit-content;
-  padding-left: 10vw;
-  padding-right: 2vw;
-  
-}
-#button-clear {
+  .select-menu,
+  .buttons{
+    flex: 1;
+  }
+  .select-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    min-width: 150px;
+    width: fit-content;
+    
+  }
+  .buttons {
+    display: flex;
+    justify-content:space-between ;
+    height: 34px;
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    align-items: center;
+    width: fit-content;
+    padding-left: 10vw;
+    padding-right: 2vw;
+    
+  }
+  #button-clear {
     font-family: "JetBrains Mono";
     color:white;
     background-color: #000000;
     border-radius: 20px;
     border-color: #F8F8F1;
-    padding: 2px 5px;
+    padding: 5px 25px;
     box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.63);
 }
 #button-clear:hover{
-  background-color:#706e6e;
+  background-color:#575656;
     transition: 0.3s;
   }
 #button-stats {
@@ -122,14 +120,13 @@ article {
     border-radius: 30%;
     border-color: #F8F8F1;
     padding: 2px 5px;
-    position: absolute;
     height:30px;
-    box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.63);
-  }
+    box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.63);  
+    }
   #button-stats:hover{
-    background-color:#cacbcb;
-      transition: 0.3s;
-  }
+    background-color:#cfcea7;
+    transition: 0.3s;
+    }
   .material-symbols-outlined {
     font-variation-settings:
     'FILL' 0,
@@ -137,7 +134,7 @@ article {
     'GRAD' 0,
     'opsz' 24;
     color: black;
-  }
+    }
 #root {
   /*todo el cuerpo donde estan las tarjetas*/
   background-color: white;
@@ -147,14 +144,14 @@ article {
   /*distancia entre columnas*/
   display: inline-block;
   /* Asegura que las tarjetas se comporten como bloques en línea */
-  /* padding: 6vw; */
+  padding-right: 1vw;
   list-style: none;
   /*para que los puntitos desaparezcan*/
   margin-top: 50px;
   margin-bottom: 20px;
-  margin-right: 5vw;
+margin-right: 5vw;
 }
-
+ 
 #cardContainer {
   /*tarjetas independientes*/
   background-color: #F8F8F1;
@@ -172,23 +169,14 @@ li {
   list-style: none;
   /*para que los puntitos desaparezcan*/
 }
-
-dt.contenedor1 {
-  /*cada item dentro de las tarjetas*/
-  font-family: "JetBrains Mono";
-  font-size: small;
-  max-width: 100%;
-  margin: 1px 0px;
-  text-align: center;
-  /* Centra el texto horizontalmente */
-}
 dd {
   /*cada item dentro de las tarjetas*/
   font-family: "JetBrains Mono";
-  font-size: small;
+  /* font-size:small; */
   max-width: 100%;
   margin: 1px 0px;
   text-align: center;
+  font-size:15px;
   /* Centra el texto horizontalmente */
 }
 img[itemprop="image"] {
@@ -200,7 +188,7 @@ img[itemprop="image"] {
 dd[itemprop="name"] {
   font-family: "Sometype Mono";
   font-weight: bold;
-  font-size: larger;
+  font-size:20px;
   margin: 3px;
 }
 footer {
@@ -233,9 +221,8 @@ option {
 }
 select option {
   height: 30px;
-  /* Puedes ajustar la altura según tus preferencias */
   padding: 5px;
-  /* Puedes ajustar el relleno según tus preferencias */
+  
 }
 
 option:hover {
@@ -247,7 +234,7 @@ option:hover {
   margin-top:2%;
   width: 100vw;
   background-color: rgb(255, 255, 255);
-  height: fit-content;
+height: fit-content;
 }
 #stats{
   display:flex;
@@ -265,7 +252,7 @@ option:hover {
   display: flex;  
   flex-direction: column;
   text-align: right;
-  margin:1%; 
+  margin:1%;
   background-color: rgb(255, 255, 255);
   font-family: "JetBrains Mono";
   flex-shrink: 0;
@@ -277,9 +264,9 @@ option:hover {
   flex-direction: row;
   flex: 1;
   background-color: rgb(0, 0, 0);
-  right: 0;
-  width: fit-content; /*para que el contenedor se adecue al contenido*/
-  flex-shrink: 0;
+    right: 0;
+    width: fit-content; /*para que el contenedor se adecue al contenido*/
+flex-shrink: 0;
   margin:0.7%;
 }
 
@@ -294,7 +281,7 @@ option:hover {
   position: fixed;
   top: 50%;
   left: 50%;
-  /* height:80%; */
+    /* height:80%; */
   /* padding-bottom: 15vw; */
   transform: translate(-50%, -50%);
   background-color:#f6f6ec;
@@ -324,17 +311,15 @@ option:hover {
   margin-right:4%;
   /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);  */
 }
+
 #close-button::after {
   content:"Cerrar";
   background-color: #000000;
-  height: 30px;
+    height: 30px;
   width: 100px;
-  color: white;
-  font-size: medium;
-  
+    color: white;
+  font-size: medium; 
 }
-
-
 #tarjeta {
   list-style-type: none;
   background-color: #f6f6ec;
@@ -355,7 +340,7 @@ option:hover {
   background-color:#f6f6ec;
   margin: 0px;
   padding-bottom: 0px;
-  padding-top:6px; 
+  padding-top:6px;
 }
 
 #imagenDetails {
@@ -379,6 +364,7 @@ option:hover {
   flex-grow: 1; /* El texto ocupa el espacio restante en la tarjeta */
   background-color: #f6f6ec;
   padding:0 2vw 2vw 2vw;
+
 }
 
 dd[itemprop="descriptionDetails"] {
@@ -389,12 +375,12 @@ dd[itemprop="descriptionDetails"] {
   /* font-size: 12.5px; */
   margin-top:2vw;
   margin-bottom:2vw;
-  font-size:90%;
+  font-size:14px;
   
 }
 /* Nombre de la ficha  */
 dd[itemprop="nameDetails"] {
-  font-size: larger;
+  font-size:x-large;
   font-weight: bold;
   margin-top:1vw;
   margin-bottom: 1vw;
@@ -438,6 +424,15 @@ dd[itemprop="nameDetails"] {
   border: none;
   margin: 0;
 }
+@media (max-width: 1500px) {
+dd {
+  font-size:17px;
+}
+
+dd[itemprop="name"] {
+  font-size:22px;
+}
+}
 @media (max-width: 1100px) {
   dd[itemprop="descriptionDetails"] {
     text-align: justify;
@@ -447,7 +442,7 @@ dd[itemprop="nameDetails"] {
     /* font-size: 12.5px; */
     margin-top:2vw;
     margin-bottom:2vw;
-    font-size:90%;
+    font-size:15px;
     padding-right:4vw;
   } 
   /* imagen de la ficha  */
@@ -473,25 +468,19 @@ dd[itemprop="nameDetails"] {
   justify-content: center;
 }
 #button-stats{
-  margin-right: 15%;
+  margin-right: 50%;
 }
 #stats, #graphs{
  margin-top: 50px;
 }
-  /* el cudrado pequeño 2 */
-  #ContenedorDetails dd.contenedor3 {
-    display:none;
-  }
+   /* el cudrado pequeño 2 */
+#ContenedorDetails dd.contenedor3 {
+  display:none;
 }
-@media (max-width: 800px) {
+}
+@media (max-width: 870px) {
   dd[itemprop="descriptionDetails"] {
-    text-align: justify;
-    display: flex;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    margin-top:2vw;
-    margin-bottom:2vw;
-    padding-right:4vw;
+    font-size:16.5px;
   } 
   #tarjeta li {
     display: flex; /* Utiliza flexbox para la disposición horizontal */
@@ -499,7 +488,7 @@ dd[itemprop="nameDetails"] {
     margin-bottom: 5px; /* Espaciado entre tarjetas */
     width: 100%; /* Ancho del 100% dentro de la tarjeta */
   }
-  
+
   #ContenedorDetails {
     display: flex;
     flex-direction: column; /* Alinea los elementos en columna */
@@ -531,6 +520,7 @@ dd[itemprop="nameDetails"] {
   height: auto; /* Permite que la altura se ajuste automáticamente */
   object-fit: contain;
 }
+
 #close-button::after{
   content:"x";
   font-size:20px;

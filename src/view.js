@@ -3,17 +3,17 @@ export const renderItems = (data) => {
   artCard.setAttribute("itemscope", "");
   data.forEach((painting) => {
     const listItem = document.createElement("li");
-    listItem.setAttribute('itemtype', "");
+    listItem.setAttribute('itemtype', "http://schema.org/CreativeWork");
 
     /* ` se utiliza para delimitar las plantillas de cadena, y ${}` se utiliza para insertar expresiones en esas plantillas de cadena.
     dt: description term y dd: description details. El dt está vacio porque no queremos mostrar el nombre de la caracteristica solo el dato*/
-    listItem.innerHTML = `<dl id="cardContainer">
-    <dt><img itemprop="image" src="${painting.imageUrl}" alt="${painting.name}"></dd>
-          <dt class="contenedor1"></dt><dd itemprop="name">${painting.name}</dd>
-          <dt class="contenedor1"></dt><dd itemprop="artistName">${painting.facts.artistName}</dd>
-          <dt class="contenedor1"></dt><dd itemprop="artMovement">${painting.facts.artMovement}</dd>
-          <dt class="contenedor1"></dt><dd itemprop="creationYear">${painting.facts.creationYear}</dd>
-          <dt class="contenedor1"></dt><dd itemprop="shortDescription">${painting.shortDescription}</dd>
+    listItem.innerHTML = `<dl id="cardContainer" "itemscope"="CreativeWork">
+    <dt><img itemprop="image" itemtype="image" src="${painting.imageUrl}" alt="${painting.name}"></dd>
+          <dt class="contenedor1" itemtype="http://schema.org/CreativeWork"></dt><dd itemprop="name">${painting.name}</dd>
+          <dt class="contenedor1" itemtype="http://schema.org/CreativeWork"></dt><dd itemprop="artistName">${painting.facts.artistName}</dd>
+          <dt class="contenedor1" itemtype="http://schema.org/CreativeWork"></dt><dd itemprop="artMovement">${painting.facts.artMovement}</dd>
+          <dt class="contenedor1" itemtype="http://schema.org/CreativeWork"></dt><dd itemprop="creationYear">${painting.facts.creationYear}</dd>
+          <dt class="contenedor1" itemtype="http://schema.org/CreativeWork"></dt><dd itemprop="shortDescription">${painting.shortDescription}</dd>
         </dl>`;
     // Crea la tarjeta detallada
     listItem.querySelector("img").addEventListener("click", () => {
