@@ -53,10 +53,10 @@ ${movementOptions.join("")}`;
 document
   .querySelector("#artist-filter")
   .addEventListener("change", function (event) {
-    const artistDisplay = event.target.value;
     document.querySelector("#artmovement-filter").value = "Corrientes";
     document.querySelector("#alphabetical-order").value = "Ordenar";
-    const artistCards = filterData(currentData, "artistName", artistDisplay);
+    const artistDisplay = event.target.value;
+    const artistCards = filterData(data, "artistName", artistDisplay);
     currentData = [...artistCards];
     const filteredCards = renderItems(artistCards);
     const clearScreen = document.querySelector("#root");
@@ -102,25 +102,25 @@ document
   });
 
 //ESTADISTICA
-const dataEstadistic = computeStats(data);
-const selectEstadistic = document.querySelector("#movementEstadistic");
+const dataStats = computeStats(data);
+const selectStats = document.querySelector("#movementStats");
 document.querySelector("#button-stats").addEventListener("click", function () {
-  if (selectEstadistic.style.display === "flex") {
-    selectEstadistic.style.display = "none";
-    // selectEstadistic.innerHTML = "";
+  if (selectStats.style.display === "flex") {
+    selectStats.style.display = "none";
+    // selectStats.innerHTML = "";
   } else {
-    selectEstadistic.style.display = "flex";
+    selectStats.style.display = "flex";
     const stats = document.getElementById("stats");
     const graphs = document.getElementById("graphs");
     if (stats.childElementCount === 0) {
-      Object.entries(dataEstadistic).forEach(([key, value]) => {
-        const cardEsta = document.createElement("div");
-        cardEsta.id = "cardEsta";
-        cardEsta.innerHTML = `${key}: ${value} %`;
+      Object.entries(dataStats).forEach(([key, value]) => {
+        const cardStats = document.createElement("div");
+        cardStats.id = "cardStats";
+        cardStats.innerHTML = `${key}: ${value} %`;
         const graph = document.createElement("div");
         graph.id = "graph";
         graph.innerHTML = graphIcon(value);
-        stats.appendChild(cardEsta);
+        stats.appendChild(cardStats);
         graphs.appendChild(graph);
       });
     }
