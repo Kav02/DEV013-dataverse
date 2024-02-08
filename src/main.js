@@ -53,10 +53,10 @@ ${movementOptions.join("")}`;
 document
   .querySelector("#artist-filter")
   .addEventListener("change", function (event) {
-    const artistDisplay = event.target.value;
     document.querySelector("#artmovement-filter").value = "Corrientes";
     document.querySelector("#alphabetical-order").value = "Ordenar";
-    const artistCards = filterData(currentData, "artistName", artistDisplay);
+    const artistDisplay = event.target.value;
+    const artistCards = filterData(data, "artistName", artistDisplay);
     currentData = [...artistCards];
     const filteredCards = renderItems(artistCards);
     const clearScreen = document.querySelector("#root");
